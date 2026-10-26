@@ -1,0 +1,159 @@
+# Runs the Reqnroll/Playwright tests against a Pega environment.
+#
+# To run it by hand: Actions tab -> "Playwright Tests" -> "Run workflow", pick the
+# environment and the group of tests, and press the green button. When the run is done,
+# the results are on the run's summary page and the screenshots/traces of failed
+# scenarios are under "Artifacts" (open a trace zip at https://trace.playwright.dev).
+#
+# Repository secrets (Settings -> Secrets and variables -> Actions):
+#   USER_SECRETS_JSON       required: the full contents of your local user secrets file
+#                           (~/.microsoft/usersecrets/7e5d5753-0396-4055-ab71-88df3e147f95/secrets.json),
+#                           i.e. the application URL and all test-user credentials.
+#   APPLICATION_URL_DEV     optional: URL per environment; when missing, the
+#   APPLICATION_URL_TEST    ApplicationUrl from USER_SECRETS_JSON is used.
+#   APPLICATION_URL_ACCEPT
+# Repository variable (optional):
+#   RUNNER                  runner label to run on, e.g. "self-hosted" when the Pega
+#                           environments can't be reached from GitHub's own runners.
+
+name: NWB Playwright Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Pega environment to test against
+        type: choice
+        options: [DEV, TEST, ACCEPT]
+        default: TEST
+      tests:
+        description: Group of tests (Gherkin tag) to run
+        type: choice
+        options: [Smoke, Short, Long, Variable, Deposit, LoanUpdate, CsvFiles, Shared, Swaps, PricingGrid, CLM, All]
+        default: Smoke
+      filter:
+        description: "Advanced: custom dotnet test filter, overrides the group above (e.g. FullyQualifiedName~EmailContentShortFeature)"
+        type: string
+        required: false
+  pull_request:
+    branches: [main]
+  push:
+    # Lets the workflow run before it is on main; "Run workflow" only appears once it is merged.
+    branches: [github-actions-make-tests-runnable-from-github]
+
+# The tests create and lock cases in a shared environment, so never run two jobs
+# against the same environment at once; a new run waits for the previous one.
+concurrency:
+  group: playwright-${{ inputs.environment || 'TEST' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  checks: write # test report on the run page
+
+jobs:
+  test:
+    name: ${{ inputs.tests || 'Smoke' }} tests on ${{ inputs.environment || 'TEST' }}
+    runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 180
+    defaults:
+      run:
+        working-directory: NwbPlaywright
+    env:
+      ENVIRONMENT: ${{ inputs.environment || 'TEST' }}
+      TESTS: ${{ inputs.tests || 'Smoke' }}
+      CUSTOM_FILTER: ${{ inputs.filter }}
+      # Dates in the expected values are computed with the local clock.
+      TZ: Europe/Amsterdam
+      # Overrides for appsettings.json (TestSettings__<Property>); there is no screen on a runner.
+      TestSettings__Headless: "true"
+      TestSettings__DownloadFilePath: ${{ github.workspace }}/NwbPlaywright/Downloads/
+      TestSettings__DeleteFilesAfterTestRun: "true"
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Configure secrets
+        env:
+          USER_SECRETS_JSON: ${{ secrets.USER_SECRETS_JSON }}
+          ENVIRONMENT_URL: ${{ secrets[format('APPLICATION_URL_{0}', inputs.environment || 'TEST')] }}
+        run: |
+          if [ -z "$USER_SECRETS_JSON" ]; then
+            echo "::error::Repository secret USER_SECRETS_JSON is missing. Ask the maintainer of this repository to add it (see the top of .github/workflows/playwright.yml)."
+            exit 1
+          fi
+          secrets_dir="$HOME/.microsoft/usersecrets/7e5d5753-0396-4055-ab71-88df3e147f95"
+          mkdir -p "$secrets_dir"
+          printf '%s' "$USER_SECRETS_JSON" > "$secrets_dir/secrets.json"
+
+          url="$ENVIRONMENT_URL"
+          if [ -n "$url" ]; then
+            echo "TestSettings__ApplicationUrl=$url" >> "$GITHUB_ENV"
+          else
+            url=$(jq -r '.["TestSettings:ApplicationUrl"] // .TestSettings.ApplicationUrl // empty' "$secrets_dir/secrets.json")
+          fi
+          if [ -z "$url" ]; then
+            echo "::error::No application URL for $ENVIRONMENT. Add the secret APPLICATION_URL_$ENVIRONMENT, or TestSettings:ApplicationUrl to USER_SECRETS_JSON."
+            exit 1
+          fi
+          echo "APP_URL=$url" >> "$GITHUB_ENV"
+
+      - name: Check that the environment can be reached
+        run: |
+          if ! curl -sS -o /dev/null --max-time 30 "$APP_URL"; then
+            echo "::error::The $ENVIRONMENT environment can't be reached from this runner. If it is only reachable from the NWB network, set the repository variable RUNNER to a self-hosted runner label."
+            exit 1
+          fi
+
+      - name: Build
+        run: dotnet build
+
+      - name: Install browser
+        run: pwsh bin/Debug/net10.0/playwright.ps1 install --with-deps chromium
+
+      - name: Run tests
+        run: |
+          if [ -n "$CUSTOM_FILTER" ]; then
+            filter="$CUSTOM_FILTER"
+          elif [ "$TESTS" = "All" ]; then
+            filter="Category!=BekijkenVoorVerwijdering"
+          else
+            filter="Category=$TESTS&Category!=BekijkenVoorVerwijdering"
+          fi
+          mkdir -p Downloads
+          {
+            echo "### Playwright tests"
+            echo "- Environment: **$ENVIRONMENT**"
+            echo "- Filter: \`$filter\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+          dotnet test --no-build --filter "$filter" \
+            --results-directory TestResults \
+            --logger "trx;LogFileName=results.trx" \
+            --logger "console;verbosity=normal"
+
+      - name: Test report
+        if: ${{ !cancelled() }}
+        uses: dorny/test-reporter@v2
+        with:
+          name: Test results (${{ env.TESTS }} on ${{ env.ENVIRONMENT }})
+          path: TestResults/*.trx
+          reporter: dotnet-trx
+          fail-on-empty: false
+
+      - name: Upload screenshots, traces and reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v5
+        with:
+          name: playwright-results-${{ env.ENVIRONMENT }}-${{ github.run_number }}
+          retention-days: 14
+          if-no-files-found: ignore
+          path: |
+            TestResults/
+            bin/Debug/net10.0/playwright-screenshots/
+            bin/Debug/net10.0/playwright-traces/
+            bin/Debug/net10.0/output/
+            bin/Debug/net10.0/LivingDoc.ndjson
