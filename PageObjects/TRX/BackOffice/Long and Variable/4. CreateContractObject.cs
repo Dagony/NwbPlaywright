@@ -8,11 +8,11 @@ using HtmlAgilityPack;
 using System;
 using System.Text;
 using System.Text.RegularExpressions;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     public interface ICreateContractObject
     {

@@ -3,17 +3,17 @@ using Microsoft.Playwright;
 using NUnit.Framework;
 using Reqnroll;
 using System.IO;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using TA.Playwright.PageObjects;
-using TA.Playwright.Support;
-using TA.Playwright.Extensions;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using NwbPlaywright.PageObjects;
+using NwbPlaywright.Support;
+using NwbPlaywright.Extensions;
 
 [assembly: Parallelizable(ParallelScope.Children)]
 [assembly: LevelOfParallelism(6)]
 
-namespace TA.Playwright.Hooks
+namespace NwbPlaywright.Hooks
 {
     [Binding]
     public class Hooks

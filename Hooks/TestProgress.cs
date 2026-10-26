@@ -1,4 +1,4 @@
-namespace TA.Playwright.Hooks
+namespace NwbPlaywright.Hooks
 {
     [Binding]
     public class TestProgress

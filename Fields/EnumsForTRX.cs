@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace TA.Playwright.Fields
+namespace NwbPlaywright.Fields
 {
     public class EnumsForTRX
     {

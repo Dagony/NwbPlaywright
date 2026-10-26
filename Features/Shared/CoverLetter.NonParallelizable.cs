@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace TA.Playwright.Features.Shared
+namespace NwbPlaywright.Features.Shared
 {
     [NonParallelizable]
     public partial class CoverLetterFeature

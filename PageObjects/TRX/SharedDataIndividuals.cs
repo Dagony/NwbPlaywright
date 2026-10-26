@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Fields;
+using NwbPlaywright.Fields;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     public interface ISharedDataIndividuals
     {

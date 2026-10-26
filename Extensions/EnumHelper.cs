@@ -6,9 +6,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Fields;
+using NwbPlaywright.Fields;
 
-namespace TA.Playwright.Extensions
+namespace NwbPlaywright.Extensions
 {
     public class EnumHelper
     {

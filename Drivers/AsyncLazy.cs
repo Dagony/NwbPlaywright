@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace TA.Playwright.Drivers
+namespace NwbPlaywright.Drivers
 {
     public class AsyncLazy<T> : Lazy<Task<T>>
     {

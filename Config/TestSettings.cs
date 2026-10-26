@@ -1,7 +1,7 @@
 using System.Globalization;
-using TA.Playwright.Drivers;
+using NwbPlaywright.Drivers;
 
-namespace TA.Playwright.Config
+namespace NwbPlaywright.Config
 {
     public class TestSettings
     {

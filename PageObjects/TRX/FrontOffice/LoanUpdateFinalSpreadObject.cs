@@ -11,12 +11,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     public interface ILoanUpdateFinalSpreadObject
     {

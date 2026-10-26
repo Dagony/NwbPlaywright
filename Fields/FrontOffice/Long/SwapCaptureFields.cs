@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TA.Playwright.Fields.FrontOffice.Long
+namespace NwbPlaywright.Fields.FrontOffice.Long
 {
     public class SwapCaptureFields
     {

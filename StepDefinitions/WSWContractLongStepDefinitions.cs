@@ -3,12 +3,12 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using System.Globalization;
 using System.Reflection;
 using System.Runtime.ConstrainedExecution;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using TA.Playwright.PageObjects;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using NwbPlaywright.PageObjects;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     [Binding]
     public class WSWContractLongStepDefinitions

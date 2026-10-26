@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
 
-namespace TA.Playwright.PageObjects.CLM
+namespace NwbPlaywright.PageObjects.CLM
 {
     public interface IBasePageCLMObject
     {

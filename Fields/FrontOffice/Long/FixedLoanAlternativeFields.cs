@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TA.Playwright.Fields
+namespace NwbPlaywright.Fields
 {
     public class FixedLoanAlternativeFields
     {

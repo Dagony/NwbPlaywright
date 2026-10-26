@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace TA.Playwright.Extensions
+namespace NwbPlaywright.Extensions
 {
     public static class DeserializerExtensions
     {

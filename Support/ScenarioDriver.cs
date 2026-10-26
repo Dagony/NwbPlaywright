@@ -1,10 +1,10 @@
 using Microsoft.Playwright;
 using Reqnroll;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.PageObjects;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.PageObjects;
 
-namespace TA.Playwright.Support
+namespace NwbPlaywright.Support
 {
     public class ScenarioDriver
     {

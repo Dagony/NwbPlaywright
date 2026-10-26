@@ -5,11 +5,11 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     public interface INewCaseObject
     {

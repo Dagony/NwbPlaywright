@@ -1,11 +1,11 @@
   Determining projects to restore...
   All projects are up-to-date for restore.
-  TA.Playwright -> /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/TA.Playwright.dll
-Test run for /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/TA.Playwright.dll (.NETCoreApp,Version=v10.0)
+  NwbPlaywright -> /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/NwbPlaywright.dll
+Test run for /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/NwbPlaywright.dll (.NETCoreApp,Version=v10.0)
 A total of 1 test files matched the specified pattern.
-/Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/TA.Playwright.dll
+/Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/NwbPlaywright.dll
 NUnit Adapter 1.0.0.0: Test execution started
-Running selected tests in /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/TA.Playwright.dll
+Running selected tests in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/NwbPlaywright.dll
    NUnit3TestExecutor discovered 10 of 10 NUnit test cases using Current Discovery mode, Non-Explicit run
 [1;36mProgress: 0/10 tests run[0m
 [1;36mProgress: 1/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 1[0m | [1;31mFAILED[0m: TC02 Fixed High Notional | Disapproved
@@ -41,10 +41,10 @@ Klik op deze url: Loan Request  om case  LR-57080  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,6s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101446.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101446.zip
 Saving trace for: TC02 Fixed High Notional | Disapproved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101446_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101446_screenshot.png]
 
   Failed TC02FixedHighNotionalDisapproved("C","AccountDesk1","100.000.000,01","Bullet","07-12-2026","07-7-2031","Weekly","","","Monday","Act/Act","0,5","0,75","","","1,5","1,508","2",null) [40 s]
   Error Message:
@@ -58,7 +58,7 @@ Saving trace for: TC02 Fixed High Notional | Disapproved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -69,8 +69,8 @@ Saving trace for: TC02 Fixed High Notional | Disapproved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC02FixedHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 336
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC02FixedHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 336
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -114,10 +114,10 @@ Saving trace for: TC02 Fixed High Notional | Disapproved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,6s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101446.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101446.zip
  Saving trace for: TC02 Fixed High Notional | Disapproved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101446_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101446_screenshot.png]
 
 
 [1;36mProgress: 2/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 2[0m | [1;31mFAILED[0m: TC01 Fixed High Notional | Approved
@@ -153,10 +153,10 @@ Klik op deze url: Loan Request  om case  LR-56099  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (8,1s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101449.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101449.zip
 Saving trace for: TC01 Fixed High Notional | Approved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101449_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101449_screenshot.png]
 
   Failed TC01FixedHighNotionalApproved("A","AccountDesk1","100.000.000,01","Bullet","07-12-2026","07-7-2031","Weekly","","","Monday","Act/Act","0,5","0,75","","","1,5","1,508","0",null) [43 s]
   Error Message:
@@ -170,7 +170,7 @@ Saving trace for: TC01 Fixed High Notional | Approved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -181,8 +181,8 @@ Saving trace for: TC01 Fixed High Notional | Approved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC01FixedHighNotionalApproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 228
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC01FixedHighNotionalApproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 228
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -226,10 +226,10 @@ Saving trace for: TC01 Fixed High Notional | Approved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (8,1s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101449.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101449.zip
  Saving trace for: TC01 Fixed High Notional | Approved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101449_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101449_screenshot.png]
 
 
 [1;36mProgress: 3/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 3[0m | [1;31mFAILED[0m: TC02 Fixed High Notional | Disapproved
@@ -265,10 +265,10 @@ Klik op deze url: Loan Request  om case  LR-57081  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,5s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101450.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101450.zip
 Saving trace for: TC02 Fixed High Notional | Disapproved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101450_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101450_screenshot.png]
 
   Failed TC02FixedHighNotionalDisapproved("D","AccountDesk1","200.000.000,01","Bullet","07-12-2026","07-7-2031","Weekly","","","Monday","30/360","10","10","","","2","2,010","3",null) [45 s]
   Error Message:
@@ -282,7 +282,7 @@ Saving trace for: TC02 Fixed High Notional | Disapproved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -293,8 +293,8 @@ Saving trace for: TC02 Fixed High Notional | Disapproved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC02FixedHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 336
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC02FixedHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 336
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -338,10 +338,10 @@ Saving trace for: TC02 Fixed High Notional | Disapproved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,5s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101450.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC02 Fixed High Notional | Disapproved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC02 Fixed High Notional | Disapproved_20261001_101450.zip
  Saving trace for: TC02 Fixed High Notional | Disapproved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101450_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC02 Fixed High Notional | Disapproved_20261001_101450_screenshot.png]
 
 
 [1;36mProgress: 4/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 4[0m | [1;31mFAILED[0m: TC01 Fixed High Notional | Approved
@@ -377,10 +377,10 @@ Klik op deze url: Loan Request  om case  LR-56101  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,9s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101454.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101454.zip
 Saving trace for: TC01 Fixed High Notional | Approved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101454_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101454_screenshot.png]
 
   Failed TC01FixedHighNotionalApproved("B","AccountDesk1","200.000.000,01","Bullet","07-12-2026","07-7-2031","Weekly","","","Monday","30/360","10","10","","","2","2,010","1",null) [48 s]
   Error Message:
@@ -392,7 +392,7 @@ Saving trace for: TC01 Fixed High Notional | Approved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -403,8 +403,8 @@ Saving trace for: TC01 Fixed High Notional | Approved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC01FixedHighNotionalApproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 228
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC01FixedHighNotionalApproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String couponFreq, String firstCouponDate, String lastCouponDate, String couponDay, String dayCount, String spreadH1, String finalSpread, String dealRemark, String offerReference, String marketIRate, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 228
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -448,10 +448,10 @@ Saving trace for: TC01 Fixed High Notional | Approved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,9s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101454.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC01 Fixed High Notional | Approved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC01 Fixed High Notional | Approved_20261001_101454.zip
  Saving trace for: TC01 Fixed High Notional | Approved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101454_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC01 Fixed High Notional | Approved_20261001_101454_screenshot.png]
 
 
 [1;36mProgress: 5/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 5[0m | [1;31mFAILED[0m: TC03 Variable, variable hoofdsom High Notional | Approved
@@ -487,10 +487,10 @@ Klik op deze url: Loan Request  om case  LR-56100  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (8,9s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456.zip
 Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456_screenshot.png]
 
   Failed TC03VariableVariableHoofdsomHighNotionalApproved("G","AccountDesk1","100.000.000,01","01-12-2031","01-8-2045","false","15,75","15,5","02-12-2031","28-7-2045","","5","12mE","","-5","-5","10","-12","","","-2","6",null) [50 s]
   Error Message:
@@ -502,7 +502,7 @@ Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -513,8 +513,8 @@ Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC03VariableVariableHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 586
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC03VariableVariableHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 586
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -558,10 +558,10 @@ Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (8,9s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456.zip
  Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101456_screenshot.png]
 
 
 [1;36mProgress: 6/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 6[0m | [1;31mFAILED[0m: TC03 Variable, variable hoofdsom High Notional | Approved
@@ -597,10 +597,10 @@ Klik op deze url: Loan Request  om case  LR-56102  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,6s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458.zip
 Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458_screenshot.png]
 
   Failed TC03VariableVariableHoofdsomHighNotionalApproved("H","AccountDesk1","200.000.000,01","01-12-2031","01-6-2045","false","15,75","15,5","","","","1","3mE","","5","5","10","2,75","","","12,75","7",null) [53 s]
   Error Message:
@@ -612,7 +612,7 @@ Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -623,8 +623,8 @@ Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC03VariableVariableHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 586
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC03VariableVariableHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 586
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -668,10 +668,10 @@ Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,6s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, variable hoofdsom High Notional | Approved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458.zip
  Saving trace for: TC03 Variable, variable hoofdsom High Notional | Approved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, variable hoofdsom High Notional | Approved_20261001_101458_screenshot.png]
 
 
 [1;36mProgress: 7/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 7[0m | [1;31mFAILED[0m: TC03 Variable, vaste hoofdsom High Notional | Approved
@@ -707,10 +707,10 @@ Klik op deze url: Loan Request  om case  LR-57082  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,9s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707.zip
 Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707_screenshot.png]
 
   Failed TC03VariableVasteHoofdsomHighNotionalApproved("E","AccountDesk1","100.000.000,01","07-12-2026","07-7-2031","true","","","","","","Monday","1wE","true","0,5","0,5","0,75","0,75","OfferRef Variable High notional TC A","Dealremark Variable High notional TC A","1,500","4",null) [2 m 21 s]
   Error Message:
@@ -722,7 +722,7 @@ Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -733,8 +733,8 @@ Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC03VariableVasteHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 461
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC03VariableVasteHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 461
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -778,10 +778,10 @@ Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,9s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707.zip
  Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101707_screenshot.png]
 
 
 [1;36mProgress: 8/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 8[0m | [1;31mFAILED[0m: TC03 Variable, vaste hoofdsom High Notional | Approved
@@ -817,10 +817,10 @@ Klik op deze url: Loan Request  om case  LR-57083  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (8,4s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710.zip
 Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710_screenshot.png]
 
   Failed TC03VariableVasteHoofdsomHighNotionalApproved("F","AccountDesk1","200.000.000,01","01-12-2031","01-6-2045","true","","","","","","1","6mE","","10","","10,65","","","","10,65","5",null) [2 m 20 s]
   Error Message:
@@ -832,7 +832,7 @@ Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -843,8 +843,8 @@ Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC03VariableVasteHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 461
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC03VariableVasteHoofdsomHighNotionalApproved(String tC, String testUser, String notional, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String hoursClause, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 461
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -888,10 +888,10 @@ Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (8,4s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Open-OrderConfirmation"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Open-OrderConfirmation" with a length of 22, but "Open-CreateRequest" has a length of 18, differs near "Cre" (index 5). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC03 Variable, vaste hoofdsom High Notional | Approved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710.zip
  Saving trace for: TC03 Variable, vaste hoofdsom High Notional | Approved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC03 Variable, vaste hoofdsom High Notional | Approved_20261001_101710_screenshot.png]
 
 
 [1;36mProgress: 9/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 9[0m | [1;31mFAILED[0m: TC04 Variable,vaste hoofdsom High Notional | Disapproved
@@ -927,10 +927,10 @@ Klik op deze url: Loan Request  om case  LR-56104  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,1s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC04 Variable,vaste hoofdsom High Notional | Disapproved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC04 Variable,vaste hoofdsom High Notional | Disapproved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713.zip
 Saving trace for: TC04 Variable,vaste hoofdsom High Notional | Disapproved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713_screenshot.png]
 
   Failed TC04VariableVasteHoofdsomHighNotionalDisapproved("I","AccountDesk1","100.000.000,01","Bullet","01-12-2031","01-6-2045","true","","","","","","1","3mE","0,5","0,5","0,75","0,75","OfferRef Variable High notional TC E","Dealremark Variable High notional TC E","1,500","8",null) [2 m 19 s]
   Error Message:
@@ -942,7 +942,7 @@ Saving trace for: TC04 Variable,vaste hoofdsom High Notional | Disapproved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -953,8 +953,8 @@ Saving trace for: TC04 Variable,vaste hoofdsom High Notional | Disapproved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC04VariableVasteHoofdsomHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 711
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC04VariableVasteHoofdsomHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 711
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -998,10 +998,10 @@ Saving trace for: TC04 Variable,vaste hoofdsom High Notional | Disapproved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (7,1s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC04 Variable,vaste hoofdsom High Notional | Disapproved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC04 Variable,vaste hoofdsom High Notional | Disapproved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713.zip
  Saving trace for: TC04 Variable,vaste hoofdsom High Notional | Disapproved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable,vaste hoofdsom High Notional | Disapproved_20261001_101713_screenshot.png]
 
 
 [1;36mProgress: 10/10 tests run[0m | [1;32mPassed: 0[0m | [1;31mFailed: 10[0m | [1;31mFAILED[0m: TC04 Variable, variabele hoofdsom High Notional | Disapproved
@@ -1037,10 +1037,10 @@ Klik op deze url: Loan Request  om case  LR-56103  te openen. 
 -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (9,1s)
 [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
 -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
-[Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC04 Variable, variabele hoofdsom High Notional | Disapproved.log]
-Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715.zip
+[Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC04 Variable, variabele hoofdsom High Notional | Disapproved.log]
+Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715.zip
 Saving trace for: TC04 Variable, variabele hoofdsom High Notional | Disapproved
-[Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715_screenshot.png]
+[Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715_screenshot.png]
 
   Failed TC04VariableVariabeleHoofdsomHighNotionalDisapproved("J","AccountDesk1","200.000.000,01","Bullet","01-12-2031","01-12-2045","false","15,75","15,5","","","","1","12mE","10","10","10","10","OfferRef Variable High notional TC F","Dealremark Variable High notional TC F","20","9",null) [2 m 24 s]
   Error Message:
@@ -1052,7 +1052,7 @@ Saving trace for: TC04 Variable, variabele hoofdsom High Notional | Disapproved
    at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
    at FluentAssertions.Primitives.StringValidator.Validate()
    at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at TA.Playwright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/TA.Playwright/TA.Playwright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
+   at NwbPlaywright.StepDefinitions.HighNotionalStepDefinitions.ThenWhenTheCreateOfferPageIsSubmittedTheCaseStatusInWinLostCorrectShouldBe(String caseStatus) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/StepDefinitions/Shared/HighNotionalStepDefinitions.cs:line 110
    at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
    at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
    at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
@@ -1063,8 +1063,8 @@ Saving trace for: TC04 Variable, variabele hoofdsom High Notional | Disapproved
    at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
    at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
    at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 109
-   at TA.Playwright.Features.Shared.HighNotionalsFeature.TC04VariableVariabeleHoofdsomHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/TA.Playwright/TA.Playwright/Features/Shared/HighNotionals.feature.cs:line 836
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.ScenarioCleanupAsync() in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 109
+   at NwbPlaywright.Features.Shared.HighNotionalsFeature.TC04VariableVariabeleHoofdsomHighNotionalDisapproved(String tC, String testUser, String notional, String amortType, String startDate, String maturityDate, String setNotionalTypeToFixed, String minimalWithdrawal, String commitmentFee, String firstCouponDate, String lastCouponDate, String interestRRDate, String couponDay, String referenceRate, String spreadH1, String spreadH1Basis, String finalSpread, String finalSpreadBasis, String offerReference, String dealRemark, String customerRate, String __pickleIndex, String[] exampleTags) in /Users/mark/Developer/NwbPlaywright/NwbPlaywright/Features/Shared/HighNotionals.feature.cs:line 836
    at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
    at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
@@ -1108,10 +1108,10 @@ Saving trace for: TC04 Variable, variabele hoofdsom High Notional | Disapproved
  -> [38;2;57;204;143mdone[39m: HighNotionalStepDefinitions.ThenTheProcurationEmailContainsTheNotionalAndSpecificLALNumber() (9,1s)
  [38;2;108;149;235mAnd [39mwhen the CreateOffer page is submitted, the case status in WinLostCorrect should be "Resolved-NotApproved"
  -> [38;2;255;86;71merror[39m: Expected caseStatusText to be "Resolved-NotApproved" with a length of 20, but "Open-CreateRequest" has a length of 18, differs near "Ope" (index 0). (0,4s)
- [Attachment: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-logs/TC04 Variable, variabele hoofdsom High Notional | Disapproved.log]
- Trace file path: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-traces/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715.zip
+ [Attachment: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-logs/TC04 Variable, variabele hoofdsom High Notional | Disapproved.log]
+ Trace file path: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-traces/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715.zip
  Saving trace for: TC04 Variable, variabele hoofdsom High Notional | Disapproved
- [Screenshot: /Users/mark/Developer/TA.Playwright/TA.Playwright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715_screenshot.png]
+ [Screenshot: /Users/mark/Developer/NwbPlaywright/NwbPlaywright/bin/Debug/net10.0/playwright-screenshots/TC04 Variable, variabele hoofdsom High Notional | Disapproved_20261001_101715_screenshot.png]
 
 
 

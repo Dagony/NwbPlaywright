@@ -5,19 +5,19 @@ using DocumentFormat.OpenXml.Features;
 using Reqnroll;
 using System;
 using System.Globalization;
-using TA.Playwright.Config;
-using TA.Playwright.DataTransforms;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using TA.Playwright.Models;
-using TA.Playwright.PageObjects;
-using TA.Playwright.Support;
+using NwbPlaywright.Config;
+using NwbPlaywright.DataTransforms;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using NwbPlaywright.Models;
+using NwbPlaywright.PageObjects;
+using NwbPlaywright.Support;
 using static NUnit.Framework.Internal.OSPlatform;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using static TA.Playwright.Fields.EnumsForCLM;
-using static TA.Playwright.Fields.EnumsForTRX;
+using static NwbPlaywright.Fields.EnumsForCLM;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     [Binding]
     public class SluitbriefDepositStepDefinitions

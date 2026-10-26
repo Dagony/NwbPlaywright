@@ -3,7 +3,7 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
 using NUnit.Framework.Internal.Execution;
-using TA.Playwright.Hooks;
+using NwbPlaywright.Hooks;
 
 /// <summary>
 /// Counts the tests that will run in this test run. Declared outside any namespace so NUnit

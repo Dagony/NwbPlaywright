@@ -14,14 +14,14 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Features.Variable;
-using TA.Playwright.Fields;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Features.Variable;
+using NwbPlaywright.Fields;
+using static NwbPlaywright.Fields.EnumsForTRX;
 using Text = DocumentFormat.OpenXml.Spreadsheet.Text;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     public interface IBillOfClosureObject
     {

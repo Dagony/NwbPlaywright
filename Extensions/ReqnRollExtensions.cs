@@ -1,6 +1,6 @@
 using Reqnroll;
 
-namespace TA.Playwright.Extensions
+namespace NwbPlaywright.Extensions
 {
     internal static class ReqnRollExtensions
     {

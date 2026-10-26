@@ -1,4 +1,4 @@
-# TA.Playwright testing for NWB
+# NwbPlaywright testing for NWB
 
 This is the Test Automation project for de Nederlandse Waterschapbank. The tests are using Playwright, Reqnroll, dotnet.
 

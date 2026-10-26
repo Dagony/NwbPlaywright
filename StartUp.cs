@@ -6,20 +6,20 @@ using Reqnroll.Windsor;
 using System.ComponentModel;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using TA.Playwright.Config;
-using TA.Playwright.DataTransforms;
-using TA.Playwright.Drivers;
-using TA.Playwright.Extensions;
-using TA.Playwright.Models;
-using TA.Playwright.PageObjects;
-using TA.Playwright.PageObjects.CLM;
-using TA.Playwright.PageObjects.CLM.Individual;
-using TA.Playwright.PageObjects.TRX;
-using TA.Playwright.PageObjects.TRX.FrontOffice;
-using TA.Playwright.PageObjects.TRX.Treasury;
-using TA.Playwright.Support;
+using NwbPlaywright.Config;
+using NwbPlaywright.DataTransforms;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Extensions;
+using NwbPlaywright.Models;
+using NwbPlaywright.PageObjects;
+using NwbPlaywright.PageObjects.CLM;
+using NwbPlaywright.PageObjects.CLM.Individual;
+using NwbPlaywright.PageObjects.TRX;
+using NwbPlaywright.PageObjects.TRX.FrontOffice;
+using NwbPlaywright.PageObjects.TRX.Treasury;
+using NwbPlaywright.Support;
 
-namespace TA.Playwright
+namespace NwbPlaywright
 {
     public class Startup
     {

@@ -2,14 +2,14 @@ using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Spreadsheet;
 using Reqnroll;
 using System;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using TA.Playwright.PageObjects;
-using TA.Playwright.PageObjects.TRX.Treasury;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using NwbPlaywright.PageObjects;
+using NwbPlaywright.PageObjects.TRX.Treasury;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     [Binding]
     public class PricingGridSmokeStepDefinitions

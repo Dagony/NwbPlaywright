@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Config;
-using TA.Playwright.DataTransforms;
-using TA.Playwright.Drivers;
-using TA.Playwright.PageObjects;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.DataTransforms;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.PageObjects;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.Models
+namespace NwbPlaywright.Models
 {
     public interface IFixedModel
     {

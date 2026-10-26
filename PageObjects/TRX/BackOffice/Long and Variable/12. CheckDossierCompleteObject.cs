@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Drivers;
+using NwbPlaywright.Drivers;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     /// #12                          #12
     /// Twelfth flow of BO process

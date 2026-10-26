@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
 
-namespace TA.Playwright.PageObjects.TRX.Treasury
+namespace NwbPlaywright.PageObjects.TRX.Treasury
 {
     public interface IUpdatePricingGridObject
     {

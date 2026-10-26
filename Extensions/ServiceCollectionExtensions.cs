@@ -3,10 +3,10 @@ using Castle.Windsor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.ComponentModel;
-using TA.Playwright.Config;
+using NwbPlaywright.Config;
 using Component = Castle.MicroKernel.Registration.Component;
 
-namespace TA.Playwright.Extensions
+namespace NwbPlaywright.Extensions
 {
     public static class ServiceCollectionExtensions
     {

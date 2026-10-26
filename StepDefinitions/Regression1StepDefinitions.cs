@@ -1,12 +1,12 @@
-using TA.Playwright.Config;
-using TA.Playwright.DataTransforms;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using TA.Playwright.Models;
-using TA.Playwright.PageObjects;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.DataTransforms;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using NwbPlaywright.Models;
+using NwbPlaywright.PageObjects;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     [Binding]
     public class Regression1StepDefinitions

@@ -1,16 +1,16 @@
 using DocumentFormat.OpenXml.Spreadsheet;
 using Reqnroll;
 using System;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using TA.Playwright.Models;
-using TA.Playwright.PageObjects;
-using TA.Playwright.PageObjects.CLM;
-using TA.Playwright.PageObjects.CLM.Individual;
-using TA.Playwright.PageObjects.TRX.FrontOffice;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using NwbPlaywright.Models;
+using NwbPlaywright.PageObjects;
+using NwbPlaywright.PageObjects.CLM;
+using NwbPlaywright.PageObjects.CLM.Individual;
+using NwbPlaywright.PageObjects.TRX.FrontOffice;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     [Binding]
     public class CreateIndividualStepDefinitions

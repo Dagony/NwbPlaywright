@@ -9,13 +9,13 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields.FrontOffice.Long;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields.FrontOffice.Long;
 using static Castle.MicroKernel.ModelBuilder.Descriptors.InterceptorDescriptor;
-using static TA.Playwright.Fields.EnumsForTRX;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.PageObjects.TRX.FrontOffice
+namespace NwbPlaywright.PageObjects.TRX.FrontOffice
 {
     public interface ICaptureSwapObject
     {

@@ -3,11 +3,11 @@ using CsvHelper.Configuration;
 using DocumentFormat.OpenXml.Spreadsheet;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     /// #1                          #1
     /// Flow of BackOffice starts here

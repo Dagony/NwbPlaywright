@@ -5,11 +5,11 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.DataTransforms
+namespace NwbPlaywright.DataTransforms
 {
     public interface IVariableDataTransforms
     {

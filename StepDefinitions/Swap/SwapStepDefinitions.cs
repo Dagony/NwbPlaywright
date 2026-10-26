@@ -6,17 +6,17 @@ using Reqnroll;
 using System;
 using System.Globalization;
 using System.Reflection;
-using TA.Playwright.Config;
-using TA.Playwright.DataTransforms;
-using TA.Playwright.Drivers;
-using TA.Playwright.Fields;
-using TA.Playwright.Fields.FrontOffice.Long;
-using TA.Playwright.Models;
-using TA.Playwright.PageObjects;
-using TA.Playwright.PageObjects.TRX.FrontOffice;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.DataTransforms;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Fields;
+using NwbPlaywright.Fields.FrontOffice.Long;
+using NwbPlaywright.Models;
+using NwbPlaywright.PageObjects;
+using NwbPlaywright.PageObjects.TRX.FrontOffice;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     [Binding]
     public class SwapStepDefinitions

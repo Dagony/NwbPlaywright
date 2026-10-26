@@ -5,11 +5,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.PageObjects.TRX
+namespace NwbPlaywright.PageObjects.TRX
 {
     public interface ILoanUpdateWinLostCorrectObject
     {

@@ -1,7 +1,7 @@
 using DocumentFormat.OpenXml.InkML;
-using TA.Playwright.Config;
+using NwbPlaywright.Config;
 
-namespace TA.Playwright.Drivers
+namespace NwbPlaywright.Drivers
 {
     public interface IPlaywrightDriver
     {

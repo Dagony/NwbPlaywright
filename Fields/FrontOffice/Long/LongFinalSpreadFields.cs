@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static TA.Playwright.Fields.EnumsForTRX;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.Fields
+namespace NwbPlaywright.Fields
 {
     public class LongFinalSpreadFields
     {

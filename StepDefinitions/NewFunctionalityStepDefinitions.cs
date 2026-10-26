@@ -8,18 +8,18 @@ using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Reflection;
 using System.Threading;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.Extensions;
-using TA.Playwright.Fields;
-using TA.Playwright.Fields.FrontOffice.Long;
-using TA.Playwright.Models;
-using TA.Playwright.PageObjects;
-using TA.Playwright.PageObjects.CLM;
-using TA.Playwright.PageObjects.TRX.FrontOffice;
-using static TA.Playwright.Fields.EnumsForTRX;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.Extensions;
+using NwbPlaywright.Fields;
+using NwbPlaywright.Fields.FrontOffice.Long;
+using NwbPlaywright.Models;
+using NwbPlaywright.PageObjects;
+using NwbPlaywright.PageObjects.CLM;
+using NwbPlaywright.PageObjects.TRX.FrontOffice;
+using static NwbPlaywright.Fields.EnumsForTRX;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     [Binding]
     public class NewFunctionalityStepDefinitions

@@ -6,10 +6,10 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using HtmlAgilityPack;
 using System.Text;
 using System.Text.RegularExpressions;
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
 
-namespace TA.Playwright.PageObjects
+namespace NwbPlaywright.PageObjects
 {
     public interface ILoanUpdateCreateContractObject
     {

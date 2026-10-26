@@ -1,8 +1,8 @@
-using TA.Playwright.Config;
-using TA.Playwright.Drivers;
-using TA.Playwright.PageObjects;
+using NwbPlaywright.Config;
+using NwbPlaywright.Drivers;
+using NwbPlaywright.PageObjects;
 
-namespace TA.Playwright.StepDefinitions
+namespace NwbPlaywright.StepDefinitions
 {
     public class ValidationsStepDefinitions
     {

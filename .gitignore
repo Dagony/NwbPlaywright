@@ -397,8 +397,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-TA.Playwright/.DS_Store
+.DS_Store
 **/.DS_Store
 .DS_Store
-TA.Playwright/Features/*.feature.cs
-TA.Playwright/Features/**/*.feature.cs
+Features/*.feature.cs
+Features/**/*.feature.cs
