@@ -1,0 +1,51 @@
+using Microsoft.Playwright;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TA.Playwright.Drivers;
+
+namespace TA.Playwright.PageObjects
+{
+    /// #6                          #6
+    /// Sith flow of BO process
+    /// #6                          #6 <summary>
+    /// #6                          #6
+    /// </summary>
+    public interface ICheckGuarantorDocumentObject
+    {
+        Task ClickSubmitOpenCheckGuarantorDocumentPage();
+
+        Task OpenCheckGuarantorDocumentLink();
+    }
+
+    public class CheckGuarantorDocumentObject : ICheckGuarantorDocumentObject
+    {
+        public CheckGuarantorDocumentObject(IPlaywrightDriver playwrightDriver, IBasePageObject basePageObject)
+        {
+            this.page = playwrightDriver.Page.Result;
+            this.pageIpage1 = page.FrameLocator("iframe[name =\"PegaGadget1Ifr\"]");
+        }
+
+        private readonly IPage page;
+        private readonly IFrameLocator pageIpage1;
+
+        public async Task OpenCheckGuarantorDocumentLink()
+        {
+            // var OpenCheckGuarantorDocumentLinkLocator = PageIpage1.GetByRole(AriaRole.Link, new() { Name = "Check guarantor document (Create agreement)" });
+            var openCheckGuarantorDocumentLinkLocator = pageIpage1.GetByRole(AriaRole.Link, new() { Name = "Check guarantor documents (Agreement (Long))" });
+
+            // await OpenCheckGuarantorDocumentLinkLocator.WaitForAsync();
+            await openCheckGuarantorDocumentLinkLocator.ClickAsync();
+            await Task.Delay(800);
+        }
+
+        public async Task ClickSubmitOpenCheckGuarantorDocumentPage()
+        {
+            var submitOpenCheckGuarantorDocumentPageLocator = pageIpage1.GetByRole(AriaRole.Button, new() { Name = "Submit" });
+            await submitOpenCheckGuarantorDocumentPageLocator.WaitForAsync();
+            await submitOpenCheckGuarantorDocumentPageLocator.ClickAsync();
+        }
+    }
+}

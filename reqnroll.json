@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.reqnroll.net/reqnroll-config-latest.json",
+  "language":{
+    "feature": "en-US"
+  },
+  "generator": {
+    "allowDebugGeneratedFiles": true,
+    "allowRowTests": true
+  },
+  "trace": {
+    "stepDefinitionSkeletonStyle": "AsyncCucumberExpressionAttribute",
+    "coloredOutput": true,
+    "logLevel": "Info"
+  },
+  "formatters": {
+    "expressium": {
+      "outputFilePath": "LivingDoc.ndjson",
+      "outputFileTitle": "NWB Living Documentation",
+      "historyPath": "History/*.ndjson",
+      "includeTestResults": true
+    },
+    "html": {
+      "outputFilePath": "output/report_{timestamp}.html"
+    },
+    "message": {
+      "outputFilePath": "output/messages.ndjson"
+    }
+  }
+}
