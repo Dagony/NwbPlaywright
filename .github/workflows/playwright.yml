@@ -56,9 +56,6 @@ jobs:
     name: ${{ inputs.tests || 'Smoke' }} tests on ${{ inputs.environment || 'TEST' }}
     runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 180
-    defaults:
-      run:
-        working-directory: NwbPlaywright
     env:
       ENVIRONMENT: ${{ inputs.environment || 'TEST' }}
       TESTS: ${{ inputs.tests || 'Smoke' }}
@@ -67,7 +64,7 @@ jobs:
       TZ: Europe/Amsterdam
       # Overrides for appsettings.json (TestSettings__<Property>); there is no screen on a runner.
       TestSettings__Headless: "true"
-      TestSettings__DownloadFilePath: ${{ github.workspace }}/NwbPlaywright/Downloads/
+      TestSettings__DownloadFilePath: ${{ github.workspace }}/Downloads/
       TestSettings__DeleteFilesAfterTestRun: "true"
 
     steps:
@@ -110,7 +107,7 @@ jobs:
           fi
 
       - name: Build
-        run: dotnet build
+        run: dotnet build NwbPlaywright.csproj
 
       - name: Install browser
         run: pwsh bin/Debug/net10.0/playwright.ps1 install --with-deps chromium
@@ -130,7 +127,7 @@ jobs:
             echo "- Environment: **$ENVIRONMENT**"
             echo "- Filter: \`$filter\`"
           } >> "$GITHUB_STEP_SUMMARY"
-          dotnet test --no-build --filter "$filter" \
+          dotnet test NwbPlaywright.csproj --no-build --filter "$filter" \
             --results-directory TestResults \
             --logger "trx;LogFileName=results.trx" \
             --logger "console;verbosity=normal"
