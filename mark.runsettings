@@ -4,7 +4,7 @@
         <NumberOfTestWorkers>6</NumberOfTestWorkers>
     </NUnit>
     <RunConfiguration>
-        <TestCaseFilter>(TestCategory != @BekijkenVoorVerwijdering) &amp; (TestCategory = Mark)</TestCaseFilter>
+        <TestCaseFilter>TestCategory != BekijkenVoorVerwijdering &amp; TestCategory = Smoke</TestCaseFilter>
         <EnvironmentVariables>
             <DEBUG>pw:api</DEBUG>
         </EnvironmentVariables>

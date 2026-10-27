@@ -23,28 +23,6 @@ Feature: LoanUpdateSluitbrief
             | A  | AccountDesk1    | 1 0027588    | 1 0027588             | Stichting Waarborgfonds Sociale Woningbouw |          | 573.223,95       | Bullet    | Annual    |             | 19-06-2028 | 19-06-2087   | Annual     |                 |                |                | 19        | False | Act/365          | 0,5      | -50         |                                                |                | 0,3         | -0,20        |
             | B  | AccountDesk1 | 1W0014249RH2 | 1 0014249             |                                            |          | 623.423          | Linear    | Weekly    | 15          | 03-03-2027 | 10-04-2069   | Weekly     | 05-03-2027      | 04-12-2035     | 05-12-2035     | Wednesday | True  | Act/360          | 1,25     | 85          | This is a test deal remark for tc B Sluitbrief |                | 3           | 3,850        |
 
-    @BekijkenVoorVerwijdering
-    Scenario: TC02A Sluitbrief for a loan update variable, var hoofdsom | With multiple advisors
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        And I select counterparty "Trx Dunder Mifflin Paper Company" with "1" random counterparty individual(s) and "5" random advisor individual(s)
-        And I select PEGA task "Interest spread reset"
-        And I select a loanupdate case with prefix SECID "<SecID>"
-        And I select PEGA product "Floating rate loan floating notional" and event "Spread reset"
-        And I create a variable loan update with the following case and offer specifics
-            | TC   | CounterParty   | ExpectedGuarantor1   | Notional   | ExpectedNotional   | OfferReference   | MinimalWithdrawal   | CommitmentFee   | SetNotionalTypeToFixed   | ExpectedOriginalSecID   |
-            | <TC> | <CounterParty> | <ExpectedGuarantor1> | <Notional> | <ExpectedNotional> | <OfferReference> | <MinimalWithdrawal> | <CommitmentFee> | <SetNotionalTypeToFixed> | <ExpectedOriginalSecID> |
-        And I create a variable loan update with the following alternative specifics
-            | StartDate   | MaturityDate   | FirstCouponDate   | LastCouponDate   | InterestRRDate   | CouponDay   | ReferenceRate   | HoursClause   | SpreadH1   | SpreadH1Basis   | FinalSpread   | FinalSpreadBasis   | DealRemark   | CustomerRate   | ExpectedDayCount   |
-            | <StartDate> | <MaturityDate> | <FirstCouponDate> | <LastCouponDate> | <InterestRRDate> | <CouponDay> | <ReferenceRate> | <HoursClause> | <SpreadH1> | <SpreadH1Basis> | <FinalSpread> | <FinalSpreadBasis> | <DealRemark> | <CustomerRate> | <ExpectedDayCount> |
-        When I continue the case to BO first flow LoanDataApproval for the new PEGA class structure
-        And I open the sluitbrief
-        Then the displayed sluitbrief for variable loan update should match the expected table
-
-        Examples:
-            | TC | TestUser  | SecID        | ExpectedOriginalSecID | ExpectedGuarantor1               | Notional | ExpectedNotional | StartDate  | MaturityDate | SetNotionalTypeToFixed | MinimalWithdrawal | CommitmentFee | FirstCouponDate | LastCouponDate | InterestRRDate | CouponDay | ExpectedDayCount | ReferenceRate | HoursClause | SpreadH1 | SpreadH1Basis | FinalSpread | FinalSpreadBasis | DealRemark | OfferReference | CustomerRate |
-            | C  | Treasury1 | 2 0030582RH2 | 2 0030582             | Waarborgfonds voor de Zorgsector |          | 500.000          | 19-06-2028 | 19-06-2087   | false                  |                   | 15,22         |                 |                |                | 19        | EBOND            | 3mE           |             | -22      | 23            | -5,75       | -45,75           |            |                | -5,75        |
-            | D  | Treasury1 | 1W0025540WZ1 | 1 0025540             |                    |          | 150.000          | 03-03-2027 | 10-04-2069   | true                   |                   |               | 02-12-2031      | 09-12-2031     | 05-12-2035     | Wednesday | ACT365           | 1wE           | True        | 17,50    | 17,50         | 15,70       | 17,35            | This is a test deal remark for tc D Sluitbrief |                | 33,05        |
-
     Scenario: TC02 BASERATE | Municipality without Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s)

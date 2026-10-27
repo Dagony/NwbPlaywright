@@ -25,29 +25,6 @@ Feature: CreateFrontOfficeCases
     -Code/specflow stap uitlijnen (bijv na aanpassen parameters) => shift + alt + F
     -Code in specflow (hieronder) disablen => #
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    @BekijkenVoorVerwijdering
-    Scenario: FIXED-A loan creation
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        And I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
-        And I select PEGA task "Loan"
-        And I select PEGA product "Traditional fixed rate loan long" and event "Primary"
-        And I create a FIXED case with the following OfferData
-            | TC   | Notional   | CddReviewDate   | DealMoment   | Guarantor1   | AdditEmail1   | AdditEmail2   | SpreadCheckBy   | SpreadCheckRemarks   |
-            | <TC> | <Notional> | <CddReviewDate> | <DealMoment> | <Guarantor1> | <AdditEmail1> | <AdditEmail2> | <SpreadCheckBy> | <SpreadCheckRemarks> |
-        And I use the following FIXED alternative data
-            | OfferReference   | StartDate   | MaturityDate   | FirstCouponDate   | LastCouponDate   | InterestRRDate   | CouponDay   | CouponFreq   | DayCount   | AmortType   | NumbOfAmort   | AmortFreq   | Swap   |
-            | <OfferReference> | <StartDate> | <MaturityDate> | <FirstCouponDate> | <LastCouponDate> | <InterestRRDate> | <CouponDay> | <CouponFreq> | <DayCount> | <AmortType> | <NumbOfAmort> | <AmortFreq> | <Swap> |
-        And I use the follow FIXED spread data
-            | SpreadH1   | SpreadH2   | FinalSpread   | MarketIRate   | OverwriteSpreadH1Comment   | OverwriteSpreadH2Comment   | OverwriteSpreadMismatchComment   | OverwriteFinalSpreadComment   | OverwriteDealRemark   |
-            | <SpreadH1> | <SpreadH2> | <FinalSpread> | <MarketIRate> | <OverwriteSpreadH1Comment> | <OverwriteSpreadH2Comment> | <OverwriteSpreadMismatchComment> | <OverwriteFinalSpreadComment> | <OverwriteDealRemark> |
-        When I fill in the FIXED create offer with all the data
-        And I choose won and complete the bill of closure phase
-
-        Examples: for FIXED
-            | TC | TestUser  | CounterParty                   | Notional | SpreadCheckBy | StartDate  | MaturityDate | FirstCouponDate | LastCouponDate | InterestRRDate | CouponDay | CouponFreq | DayCount | AmortType | NumbOfAmort | AmortFreq | Swap  | SpreadH1 | SpreadH2 | FinalSpread | OverwriteFinalSpreadComment | MarketIRate | OverwriteDealRemark | CddReviewDate | DealMoment | Guarantor1 | AdditEmail1 | AdditEmail2 | SpreadCheckRemarks | OfferReference | OverwriteSpreadH1Comment | OverwriteSpreadH2Comment | OverwriteSpreadMismatchComment |
-            | A  | Treasury1 | Trx Waterschap Groot Waterland | 15250795 | false         | 03-04-2026 | 13-01-2045   |                 |                |                | Friday    | Weekly     | Act/Act  | Linear    | 10          | Quarterly | false | 5        | 2        | 5           | TESTING OVERWRITE           | 3           |                     |               |            |            |             |             |                    |                |                          |                          |                                |
-
     Scenario: FIXED-B loan creation
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "<CounterParty>" with "3" random counterparty individual(s)

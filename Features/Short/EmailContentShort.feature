@@ -26,25 +26,3 @@ Feature: EmailContentShort
             | A  | AccountDesk1 | Trx HVC N.V.                             | Trx Gemeente Meerdijk | 75.293.932 | 01-07-2026 | 29-12-2026   | 0,5     | 0,75       | 5      | Deal Remark for TC A | OfferRef for TC A |
             | B  | AccountDesk1 | Trx Stichting nationaal restauratiefonds | Trx Gemeente Meerdijk | 100.200    | 01-07-2026 | 29-12-2026   | 1,25    | 1,25       | 15     | Deal Remark for TC B | OfferRef for TC B |
             | C  | AccountDesk1 | Trx Stichting Groenfonds                 | Trx Gemeente Meerdijk | 50.254     | 01-07-2026 | 30-11-2026   | 1       | 1,00       | 25     |                      |                   |
-
-    @BekijkenVoorVerwijdering
-    Scenario: TC02 Short Text WFZ and Normal
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        And  I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
-        Given I select PEGA task "Loan"
-        Given I select PEGA product "Traditional fixed rate loan short" and event "Primary"
-        And I create a short loan with the following case and offer specifics
-            | TC   | CounterParty   | Guarantor1   | Notional   | OfferReference   |
-            | <TC> | <CounterParty> | <Guarantor1> | <Notional> | <OfferReference> |
-        And I create a short loan with the following alternative specifics
-            | StartDate   | MaturityDate   | PriceH1   | PriceFinal   | Margin   | DealRemark   |
-            | <StartDate> | <MaturityDate> | <PriceH1> | <PriceFinal> | <Margin> | <DealRemark> |
-        When I press submit an email is generated
-        Then the short offer email table should match the expected SHORT table
-        Then the displayed short email text should match the expected text
-
-        Examples:
-            | TC | TestUser  | CounterParty                        | Guarantor1 | Notional  | StartDate  | MaturityDate | PriceH1 | PriceFinal | Margin | DealRemark | OfferReference |
-            | D  | Treasury1 | Trx Waterschap Groot Waterland      |            | 7.560.500 | 01-07-2026 | 30-11-2026   | -2      | -1,22      | -15    |            |                |
-            | E  | Treasury1 | Trx Stichting Zorggroep Heilig Hart |            | 100.005   | 01-07-2026 | 15-10-2026   | 0,5     | 0,75       | 5,50   |            |                |
-            | F  | Treasury1 | Trx Gemeente Meerdijk               |            | 296.005   | 01-07-2026 | 15-10-2026   | 0,5     | 0,75       | 6,50   |            |                |

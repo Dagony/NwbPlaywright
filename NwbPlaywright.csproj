@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ReqnrollEmbeddedFeatureFiles>true</ReqnrollEmbeddedFeatureFiles>
     <UserSecretsId>7e5d5753-0396-4055-ab71-88df3e147f95</UserSecretsId>
-    <NoWarn>CS0169,CS0414,CS8600,CS8601,CS8602,CS8604,CS8618,CS8619,CS8620</NoWarn>
+    <NoWarn>CS0169,CS0414,CS8600,CS8601,CS8602,CS8604,CS8618,CS8619,CS8620,SA1101,SA1200,SA1633,SA1649,SA1201,SA1208,SA1210,SA1309</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
