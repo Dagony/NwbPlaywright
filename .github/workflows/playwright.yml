@@ -36,7 +36,7 @@ on:
         type: string
         required: false
   pull_request:
-    branches: [main]
+    branches: [main, hardening]
   push:
     # Lets the workflow run before it is on main; "Run workflow" only appears once it is merged.
     branches: [github-actions-make-tests-runnable-from-github]
