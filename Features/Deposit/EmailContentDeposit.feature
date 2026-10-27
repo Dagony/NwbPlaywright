@@ -3,28 +3,6 @@ Feature: EmailContentDeposit
 
     This automatic tests asserts the different offer mail table, text and attachment for treasury1, treasurymanager1 and accountdesk1.
 
-    @CSV @BekijkenVoorVerwijdering
-    Scenario: TC01 Offermail Deposit |
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        Given I select counterparty "<CounterParty>" with "1" random counterparty individual(s)
-        Given I select PEGA task "Deposit"
-        And I create a deposit loan with the following case and offer specifics
-            | TC   | CounterParty   | Notional   | OfferReference   | DealMoment   |
-            | <TC> | <CounterParty> | <Notional> | <OfferReference> | <DealMoment> |
-        And I create a deposit loan with the following alternative specifics
-            | StartDate   | MaturityDate   | PriceH1   | PriceFinal   | Margin   | DealRemark   |
-            | <StartDate> | <MaturityDate> | <PriceH1> | <PriceFinal> | <Margin> | <DealRemark> |
-        When I press submit an email is generated
-        Then the deposit offer email table should match the expected table
-        Then the displayed deposit email text should match the expected text
-        #Then offerte attachment should not be visible
-
-        Examples:
-            | TC | TestUser         | CounterParty                        | Notional     | StartDate  | MaturityDate | PriceH1 | PriceFinal | Margin | DealRemark           | OfferReference    | DealMoment |
-            | A  | Treasury1        | Trx Stichting Zorggroep Heilig Hart | 175000200,95 | 29-12-2026 | 29-6-2027    | 5       | 5          | 4,75   | Deal Remark for TC A | OfferRef for TC A | 26-12-2023 |
-            | B  | TreasuryManager1 | Trx Dunder Mifflin Paper Company    | 25750000,00  | 29-12-2026 | 15-10-2027   | -0,575  | -0,753     | -1,563 |                      |                   | 27-12-2023 |
-
-
     @CSV
     Scenario: TC01 Create Opics Csv file for a deposit
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case

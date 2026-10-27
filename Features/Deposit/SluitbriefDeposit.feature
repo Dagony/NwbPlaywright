@@ -3,47 +3,6 @@ Feature: SluitbriefDeposit
 
     A short summary of the feature
 
-    @BekijkenVoorVerwijdering
-    Scenario: TC01 Sluitbrief for a deposit | No advisors
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        Given I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
-        Given I select PEGA task "Deposit"
-        And I create a deposit loan with the following case and offer specifics
-            | TC   | CounterParty   | Notional   | DealMoment   |
-            | <TC> | <CounterParty> | <Notional> | <DealMoment> |
-        And I create a deposit loan with the following alternative specifics
-            | StartDate   | MaturityDate   | PriceH1   | PriceFinal   | Margin   | DealRemark   |
-            | <StartDate> | <MaturityDate> | <PriceH1> | <PriceFinal> | <Margin> | <DealRemark> |
-        When I continue the case to BO first flow LoanDataApproval for the new PEGA class structure
-        And I open the sluitbrief
-        Then the displayed sluitbrief for deposito should match the expected table
-
-
-        Examples:
-            | TC | TestUser     | CounterParty          | Notional      | StartDate  | MaturityDate | PriceH1 | PriceFinal | Margin | DealRemark          | DealMoment |
-            | A  | AccountDesk1 | Trx Gemeente Meerdijk | 85.550.455,75 | 01-12-2026 | 08-12-2026   | 4       | 4,655      | 4,5    | Dealremark for TC A | 27-11-2023 |
-
-
-    @BekijkenVoorVerwijdering
-    Scenario: TC02 Sluitbrief for a deposit | With one advisor
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        Given I select counterparty "<CounterParty>" with "0" random counterparty individual(s) and "1" random advisor individual(s)
-        Given I select PEGA task "Deposit"
-        And I create a deposit loan with the following case and offer specifics
-            | TC   | CounterParty   | Notional   | DealMoment   |
-            | <TC> | <CounterParty> | <Notional> | <DealMoment> |
-        And I create a deposit loan with the following alternative specifics
-            | StartDate   | MaturityDate   | PriceH1   | PriceFinal   | Margin   | DealRemark   |
-            | <StartDate> | <MaturityDate> | <PriceH1> | <PriceFinal> | <Margin> | <DealRemark> |
-        When I continue the case to BO first flow LoanDataApproval for the new PEGA class structure
-        And I open the sluitbrief
-        Then the displayed sluitbrief for deposito should match the expected table
-
-        Examples:
-            | TC | TestUser     | CounterParty                     | Notional   | StartDate  | MaturityDate | PriceH1 | PriceFinal | Margin | DealRemark | DealMoment |
-            | B  | AccountDesk1 | Trx Dunder Mifflin Paper Company | 19.125.975 | 01-12-2026 | 09-12-2026   | -0,5    | -0,5       | 0,1    |            | 28-11-2023 |
-
-
 
     Scenario: TC02 Sluitbrief for a deposit | With multiple advisor
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
