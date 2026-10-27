@@ -36,10 +36,10 @@ on:
         type: string
         required: false
   pull_request:
-    branches: [main, hardening]
+    branches: [main]
   push:
     # Lets the workflow run before it is on main; "Run workflow" only appears once it is merged.
-    branches: [github-actions-make-tests-runnable-from-github]
+    branches: [github-actions-make-tests-runnable-from-github, hardening]
 
 # The tests create and lock cases in a shared environment, so never run two jobs
 # against the same environment at once; a new run waits for the previous one.
