@@ -1,0 +1,31 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": { // shows *.feature.cs files as nested items
+    "*.feature": "${capture}.feature.cs"
+  },
+  "files.exclude": { // excludes compilation result
+    "**/obj/": true,
+    "**/bin/": true,
+  },
+  "cucumber.glue": [ // sets the location of the step definition classes
+    "StepDefinitions/*.cs",
+    "StepDefinitions/**/*.cs"
+  ],
+   "cucumber.features": [ // sets the location of the feature files
+    "Features/*.feature",
+    "Features/**/*.feature",
+    "Features/**/*.feature.cs",
+  ],
+  "cucumberautocomplete.features": [ // sets the location of the feature files
+    "Features/*.feature",
+    "Features/**/*.feature",
+    "Features/**/*.feature.cs",
+  ],
+  "cucumberautocomplete.steps": [ // sets the location of the step definition classes
+    "StepDefinitions/*.cs",
+    "StepDefinitions/**/*.cs"
+  ],
+  "cucumberautocomplete.syncfeatures": true,
+  "cucumberautocomplete.strictGherkinValidation": true,
+  "editor.fontSize": 12,
+}
