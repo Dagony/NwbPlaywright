@@ -147,13 +147,13 @@ namespace NwbPlaywright.Models
 
         public async Task SetGuarantorIfPresent(string guarantor1)
         {
-            var cifNumber = (string)_scenarioContext["savedCIFNumber"];
+            // var cifNumber = (string)_scenarioContext["savedCIFNumber"];
 
-            if (cifNumber == "0636914739")
-            {
-                await _finalSpreadObject.ClickGuarantorField();
-                await _finalSpreadObject.DeleteGuarantorField();
-            }
+            // if (cifNumber == "0636914739")
+            // {
+            //     await _finalSpreadObject.ClickGuarantorField();
+            //     await _finalSpreadObject.DeleteGuarantorField();
+            // }
 
             if (guarantor1 != null && guarantor1 != string.Empty)
             {
