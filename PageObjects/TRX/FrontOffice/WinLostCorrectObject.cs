@@ -266,22 +266,22 @@ namespace NwbPlaywright.PageObjects
 
         public async Task<IPage> OpenPopupWindow(PopupWindow options)
         {
-            var popupWindow = await page.RunAndWaitForPopupAsync(async () =>
+            var popupLink = options switch
             {
-                (Task emptyTask1, Task emptyTask2) choosePopup = options switch
-                {
-                    PopupWindow.Offertemail => (pageIpage1.Locator("xpath=(//a[contains(text(),'Offerte')])[1]").First.WaitForAsync(), pageIpage1.Locator("xpath=(//a[contains(text(),'Offerte')])[1]").First.ClickAsync()),
+                PopupWindow.Offertemail => pageIpage1.Locator("xpath=(//a[contains(text(),'Offerte')])[1]").First,
 
-                    PopupWindow.SluitbriefLoanUpdate => (pageIpage1.GetByText("Een update lening", new() { Exact = false }).First.WaitForAsync(), pageIpage1.GetByText("Een update lening", new() { Exact = false }).First.ClickAsync()),
+                PopupWindow.SluitbriefLoanUpdate => pageIpage1.GetByText("Een update lening", new() { Exact = false }).First,
 
-                    PopupWindow.SluitbriefNew => (pageIpage1.GetByText("Een nieuwe", new() { Exact = false }).First.WaitForAsync(), pageIpage1.GetByText("Een nieuwe", new() { Exact = false }).First.ClickAsync()),
+                PopupWindow.SluitbriefNew => pageIpage1.GetByText("Een nieuwe", new() { Exact = false }).First,
 
-                    _ => throw new Exception("Unknown option chosen for switch expression popupName switch expression"),
-                };
+                _ => throw new Exception("Unknown option chosen for switch expression popupName switch expression"),
+            };
 
-                await choosePopup.emptyTask1;
-                await choosePopup.emptyTask2;
-            });
+            // Wait for the link before starting the popup wait, otherwise a slow page eats up the popup timeout
+            await popupLink.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible, Timeout = 60000 });
+
+            var popupWindow = await page.RunAndWaitForPopupAsync(() => popupLink.ClickAsync());
+            await popupWindow.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             return popupWindow;
         }
 
@@ -307,7 +307,7 @@ namespace NwbPlaywright.PageObjects
 
         public async Task<(string addresseesEmail, string aanhefEmail, string tableEmail, string footTextEmailBasic, string tableEmailEng, string aanhefEng)> GetEmailBodyTextBasic(IPage page1)
         {
-            await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded, new PageWaitForLoadStateOptions { Timeout = 15000 });
+            await page1.WaitForLoadStateAsync(LoadState.DOMContentLoaded, new PageWaitForLoadStateOptions { Timeout = 15000 });
             await page1.FrameLocator("iframe[name=\"ShowIFrame\"]").Locator("//body").WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible, Timeout = 5000 });
 
             var addresseesEmail = await page1.Locator("(//table)[4]").InnerTextAsync();
