@@ -307,6 +307,7 @@ namespace NwbPlaywright.PageObjects
 
         public async Task<(string addresseesEmail, string aanhefEmail, string tableEmail, string footTextEmailBasic, string tableEmailEng, string aanhefEng)> GetEmailBodyTextBasic(IPage page1)
         {
+            await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded, new PageWaitForLoadStateOptions { Timeout = 15000 });
             await page1.FrameLocator("iframe[name=\"ShowIFrame\"]").Locator("//body").WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible, Timeout = 5000 });
 
             var addresseesEmail = await page1.Locator("(//table)[4]").InnerTextAsync();

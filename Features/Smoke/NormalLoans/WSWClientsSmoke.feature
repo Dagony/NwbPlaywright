@@ -1,4 +1,4 @@
-﻿@Smoke
+﻿@Smoke @non-parallelizable
 Feature: WSWClientsSmoke
     This feature smoke tests important functionally and the happy path
     for the TRX application for front- and back office for fixed and variable
