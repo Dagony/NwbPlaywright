@@ -282,6 +282,7 @@ namespace NwbPlaywright.PageObjects
 
             var popupWindow = await page.RunAndWaitForPopupAsync(() => popupLink.ClickAsync());
             await popupWindow.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+            await Task.Delay(2000);
             return popupWindow;
         }
 
