@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e63556cb-e0f6-426b-b97b-8e80434e2bd7" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ContinuousTesting.UiSettings">
+    <option name="tabHidden" value="true" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hardening" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dagony&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Dagony/NwbPlaywright.git&quot;,
+    &quot;accountId&quot;: &quot;d026b696-f2e6-4363-8727-dfabae09a93e&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.microsoft/usersecrets/7e5d5753-0396-4055-ab71-88df3e147f95/secrets.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.vscode/settings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/515f17767dafa47a73d54a6af57def683364ff68b0bb5c441572ccc1303936e6/IFrameLocator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aee9fc43fab7123424d474aacc2abcdba0fd9df9a922842f5ed37dc29bb01af2/LocatorAssertionsToBeVisibleOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Shared/NWBContract.feature" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Shared/WSWContract.feature" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Smoke/Deposit/DepositSmoke.feature" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Smoke/NormalLoans/WSWClientsSmoke.feature" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Models/SharedModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/BasePageObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/FrontOffice/FinalSpreadObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/FrontOffice/WinLostCorrectObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/LoginPageObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/NewCaseObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/StepDefinitions/Shared/GeneralStepDefinitions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/StepDefinitions/Smoke/DepositSmokeStepDefinitions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mark/Developer/NwbPlaywright/reqnroll.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LFM4swYkfC7W0Lkgvqx21KchPH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.report_2026-10-26_20-11-30.html.executor": "Run",
+    "JavaScript Debug.report_2026-10-27_07-44-08.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "c9a9d7b6-6977-4c08-b42e-98c9e2392184.executor": "Debug",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "rider.unittesting.toolwindow.stripe.button.shown": "true",
+    "settings.editor.selected.configurable": "RiderUnitTestingPageId"
+  }
+}]]></component>
+  <component name="RunManager" selected="JavaScript Debug.report_2026-10-26_20-11-30.html">
+    <configuration name="report_2026-10-26_20-11-30.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/NwbPlaywright/bin/Debug/net10.0/output/report_2026-10-26_20-11-30.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="report_2026-10-27_07-44-08.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/NwbPlaywright/bin/Debug/net10.0/output/report_2026-10-27_07-44-08.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.report_2026-10-26_20-11-30.html" />
+        <item itemvalue="JavaScript Debug.report_2026-10-27_07-44-08.html" />
+        <item itemvalue="JavaScript Debug.report_2026-10-26_20-11-30.html" />
+        <item itemvalue="JavaScript Debug.report_2026-10-26_20-11-30.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e63556cb-e0f6-426b-b97b-8e80434e2bd7" name="Changes" comment="" />
+      <created>1793045176756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793045176756</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="remove-BekijkenVoorVerwijdering to clean up a lot" />
+    <MESSAGE value="hardening - First changes for hardening the tests." />
+    <MESSAGE value="hardening - removed all @BekijkenVoorVerwijdering + fixed the deposit aanhef email by removing the English checks" />
+    <MESSAGE value="hardening - Remove unnecessary code and adding delays" />
+    <MESSAGE value="hardening - Add @non-parallelizable so tests run serial" />
+    <MESSAGE value="hardening - add this branch to the playwright.yml so that the actions can run on this branch" />
+    <MESSAGE value="hardening - updated that playwright.yml for this branch to use the actions" />
+    <MESSAGE value="hardening - increased stability with reading email in popup window" />
+    <MESSAGE value="hardening - all smoke test pass now" />
+    <MESSAGE value="hardening - Only run tests on PR to main. Added multiple NoWarn items in NwbPlaywright.csproj so that the list of warning shrinks. Nothing to worry about" />
+    <MESSAGE value="hardening - Adjust playwright.yml to remove Environment" />
+    <MESSAGE value="hardening - fix playwright.yml?" />
+    <MESSAGE value="hardening - fix playwright.yml file?" />
+    <MESSAGE value="hardening - set self-hosted runner" />
+    <MESSAGE value="hardening" />
+    <MESSAGE value="hardening - Added wait for dom content loaded after logging in" />
+    <option name="LAST_COMMIT_MESSAGE" value="hardening - Added wait for dom content loaded after logging in" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PageObjects/TRX/FrontOffice/WinLostCorrectObject.cs</url>
+          <line>309</line>
+          <properties documentPath="$PROJECT_DIR$/PageObjects/TRX/FrontOffice/WinLostCorrectObject.cs" containingFunctionPresentation="Method 'GetEmailBodyTextBasic'">
+            <startOffsets>
+              <option value="16133" />
+            </startOffsets>
+            <endOffsets>
+              <option value="16304" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
