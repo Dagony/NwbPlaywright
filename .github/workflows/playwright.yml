@@ -39,7 +39,7 @@ on:
     branches: [main]
   push:
     # Lets the workflow run before it is on main; "Run workflow" only appears once it is merged.
-    branches: [github-actions-make-tests-runnable-from-github, hardening]
+    branches: [] #[github-actions-make-tests-runnable-from-github, hardening]
 
 # The tests create and lock cases in a shared environment, so never run two jobs
 # against the same environment at once; a new run waits for the previous one.
@@ -154,3 +154,4 @@ jobs:
             bin/Debug/net10.0/playwright-traces/
             bin/Debug/net10.0/output/
             bin/Debug/net10.0/LivingDoc.ndjson
+            bin/Debug/net10.0/LivingDoc.html

@@ -1,3 +1,7 @@
+// <copyright file="TestSettings.cs" company="Nwb">
+// Copyright (c) Nwb. All rights reserved.
+// </copyright>
+
 using System.Globalization;
 using NwbPlaywright.Drivers;
 
