@@ -86,9 +86,7 @@ namespace NwbPlaywright.Models
         public async Task LoanUpdateShortCaseSetDateFields(string startDate, string maturityDate)
         {
             await _finalSpreadObject.SetStartDate(startDate);
-            await _basePageObject.PressTab();
             await _finalSpreadObject.SetMaturityDate(maturityDate);
-            await _basePageObject.PressTab();
         }
 
         public async Task ShortCaseSetSpreadFieldsFourEyes(string priceH1, string priceH2, string priceFinal, string margin, string loanType, string lalCaseNumber, bool setSpreadMessages, string? overWriteCommentH1 = "", string? overWriteCommentH2 = "", string? overWriteCommentFinal = "", string? overWriteCommentMargin = "", string? overWriteSpreadMismatchComment = "")

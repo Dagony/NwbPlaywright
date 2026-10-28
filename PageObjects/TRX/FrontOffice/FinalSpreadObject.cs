@@ -594,6 +594,7 @@ namespace NwbPlaywright.PageObjects
             await setStartDateLocator.WaitForAsync();
             await setStartDateLocator.FocusAsync();
             await setStartDateLocator.FillAsync(startdate);
+            await _basePageObject.PressTab();
             await this.page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             await Task.Delay(1500);
         }
