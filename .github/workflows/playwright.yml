@@ -72,7 +72,7 @@ jobs:
       - name: Configure secrets
         env:
           USER_SECRETS_JSON: ${{ secrets.USER_SECRETS_JSON }}
-          ENVIRONMENT_URL: ${{ secrets[format('APPLICATION_URL_{0}', 'TEST'
+          ENVIRONMENT_URL: ${{ secrets.APPLICATION_URL_TEST }}
         run: |
           if [ -z "$USER_SECRETS_JSON" ]; then
             echo "::error::Repository secret USER_SECRETS_JSON is missing. Ask the maintainer of this repository to add it (see the top of .github/workflows/playwright.yml)."
