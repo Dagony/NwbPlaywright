@@ -26,10 +26,10 @@ on:
         type: choice
         options: [Smoke, Short, Long, Variable, Deposit, LoanUpdate, CsvFiles, Shared, Swaps, PricingGrid, CLM, All]
         default: Smoke
-      filter:
-        description: "Advanced: custom dotnet test filter, overrides the group above (e.g. FullyQualifiedName~EmailContentShortFeature)"
-        type: string
-        required: false
+#      filter:
+#        description: "Advanced: custom dotnet test filter, overrides the group above (e.g. FullyQualifiedName~EmailContentShortFeature)"
+#        type: string
+#        required: false
   pull_request:
     branches: [main]
   push:
@@ -52,7 +52,7 @@ jobs:
     runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 180
     env:
-      ENVIRONMENT: TEST
+      ENVIRONMENT: "TEST"
       TESTS: ${{ inputs.tests || 'Smoke' }}
       CUSTOM_FILTER: ${{ inputs.filter }}
       # Dates in the expected values are computed with the local clock.
