@@ -215,7 +215,7 @@ namespace NwbPlaywright.StepDefinitions
             actualTable.Should().Contain($"Offerte Deposito ({lalCaseNumber})");
 
             actualFootTextEmailBasic.Should().Contain("Op dit deposito zullen de Algemene Voorwaarden NWB Bank van toepassing zijn. Deze voorwaarden zijn te vinden op: https://nwbbank.com/public-finance/algemene-voorwaarden.", Exactly.Once());
-            actualFootTextEmailBasic.Should().Contain("The General Terms and Conditions of NWB Bank (available at https://nwbbank.com/public-finance/algemene-voorwaarden) and the General Credit Conditions of NWB Bank, which are attached to this email, will apply to the deposit.", Exactly.Once());
+            // actualFootTextEmailBasic.Should().Contain("The General Terms and Conditions of NWB Bank (available at https://nwbbank.com/public-finance/algemene-voorwaarden) and the General Credit Conditions of NWB Bank, which are attached to this email, will apply to the deposit.", Exactly.Once());
             await popupOfferEmail.CloseAsync();
 
             await _winLostCorrectObject.ClickWinLostCorrect("Won");

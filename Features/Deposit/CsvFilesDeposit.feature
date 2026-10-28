@@ -1,24 +1,6 @@
 ﻿@Deposit
 Feature: CsvFilesDeposit
 
-    @CSV @BekijkenVoorVerwijdering
-    Scenario: TC01A Create Opics Csv file for a deposit - PF
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        And I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
-        And I select PEGA task "Deposit"
-        And I create a deposit loan with the following case and offer specifics
-            | TC   | CounterParty   | Notional   | DealMoment   |
-            | <TC> | <CounterParty> | <Notional> | <DealMoment> |
-        And I create a deposit loan with the following alternative specifics
-            | StartDate   | MaturityDate   | PriceH1   | PriceFinal   | Margin   | DealRemark   |
-            | <StartDate> | <MaturityDate> | <PriceH1> | <PriceFinal> | <Margin> | <DealRemark> |
-        When I continue the case to BO first flow LoanDataApproval for the new PEGA class structure
-        And I download the "DEPLO.csv" file
-        Then the assertions for each testcase for DEPLO short loan or deposit case is valid
-        Examples:
-            | TC | TestUser         | CounterParty                        | Notional     | StartDate  | MaturityDate | PriceH1 | PriceFinal | Margin  | DealRemark          | DealMoment |
-            | A  | AccountDesk1     | Trx Gemeente Meerdijk               | 85550455,75  | 2026-12-01 | 2026-12-08   | 4       | 4,655      | 4,5     | Dealremark for TC A | 2023-12-26 |
-
     @CSV
     Scenario: TC01B Create Opics Csv file for a deposit - TRY
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case

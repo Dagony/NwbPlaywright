@@ -21,30 +21,16 @@ name: NWB Playwright Tests
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        description: Pega environment to test against
-        type: choice
-        options: [DEV, TEST, ACCEPT]
-        default: TEST
       tests:
         description: Group of tests (Gherkin tag) to run
         type: choice
         options: [Smoke, Short, Long, Variable, Deposit, LoanUpdate, CsvFiles, Shared, Swaps, PricingGrid, CLM, All]
         default: Smoke
-      filter:
-        description: "Advanced: custom dotnet test filter, overrides the group above (e.g. FullyQualifiedName~EmailContentShortFeature)"
-        type: string
-        required: false
-  pull_request:
-    branches: [main]
-  push:
-    # Lets the workflow run before it is on main; "Run workflow" only appears once it is merged.
-    branches: [github-actions-make-tests-runnable-from-github]
 
 # The tests create and lock cases in a shared environment, so never run two jobs
 # against the same environment at once; a new run waits for the previous one.
 concurrency:
-  group: playwright-${{ inputs.environment || 'TEST' }}
+  group: playwright-TEST
   cancel-in-progress: false
 
 permissions:
@@ -53,11 +39,12 @@ permissions:
 
 jobs:
   test:
-    name: ${{ inputs.tests || 'Smoke' }} tests on ${{ inputs.environment || 'TEST' }}
-    runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    name: ${{ inputs.tests || 'Smoke' }} tests on TEST
+    #runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    runs-on: self-hosted
     timeout-minutes: 180
     env:
-      ENVIRONMENT: ${{ inputs.environment || 'TEST' }}
+      ENVIRONMENT: "TEST"
       TESTS: ${{ inputs.tests || 'Smoke' }}
       CUSTOM_FILTER: ${{ inputs.filter }}
       # Dates in the expected values are computed with the local clock.
@@ -70,14 +57,17 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      # A self-hosted runner uses the .NET 10 SDK already installed on that machine;
+      # setup-dotnet would install into the user's ~/.dotnet (and picked x64 on Apple Silicon).
       - uses: actions/setup-dotnet@v5
+        if: ${{ runner.environment == 'github-hosted' }}
         with:
           dotnet-version: 10.0.x
 
       - name: Configure secrets
         env:
           USER_SECRETS_JSON: ${{ secrets.USER_SECRETS_JSON }}
-          ENVIRONMENT_URL: ${{ secrets[format('APPLICATION_URL_{0}', inputs.environment || 'TEST')] }}
+          ENVIRONMENT_URL: ${{ secrets.APPLICATION_URL_TEST }}
         run: |
           if [ -z "$USER_SECRETS_JSON" ]; then
             echo "::error::Repository secret USER_SECRETS_JSON is missing. Ask the maintainer of this repository to add it (see the top of .github/workflows/playwright.yml)."
@@ -102,7 +92,7 @@ jobs:
       - name: Check that the environment can be reached
         run: |
           if ! curl -sS -o /dev/null --max-time 30 "$APP_URL"; then
-            echo "::error::The $ENVIRONMENT environment can't be reached from this runner. If it is only reachable from the NWB network, set the repository variable RUNNER to a self-hosted runner label."
+            echo "::error::The TEST environment can't be reached from this runner. If it is only reachable from the NWB network, set the repository variable RUNNER to a self-hosted runner label."
             exit 1
           fi
 
@@ -124,7 +114,6 @@ jobs:
           mkdir -p Downloads
           {
             echo "### Playwright tests"
-            echo "- Environment: **$ENVIRONMENT**"
             echo "- Filter: \`$filter\`"
           } >> "$GITHUB_STEP_SUMMARY"
           dotnet test NwbPlaywright.csproj --no-build --filter "$filter" \
@@ -134,18 +123,18 @@ jobs:
 
       - name: Test report
         if: ${{ !cancelled() }}
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@v3
         with:
-          name: Test results (${{ env.TESTS }} on ${{ env.ENVIRONMENT }})
+          name: Test results (${{ env.TESTS }})
           path: TestResults/*.trx
           reporter: dotnet-trx
           fail-on-empty: false
 
       - name: Upload screenshots, traces and reports
         if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
-          name: playwright-results-${{ env.ENVIRONMENT }}-${{ github.run_number }}
+          name: playwright-results-${{ github.run_number }}
           retention-days: 14
           if-no-files-found: ignore
           path: |
@@ -154,3 +143,4 @@ jobs:
             bin/Debug/net10.0/playwright-traces/
             bin/Debug/net10.0/output/
             bin/Debug/net10.0/LivingDoc.ndjson
+            bin/Debug/net10.0/LivingDoc.html

@@ -51,6 +51,8 @@ namespace NwbPlaywright.PageObjects
         Task<int> CalculateBusinessDaysFromCurrentDateToStartDate(DateTime startDate);
 
         Task ClickYesContinueButton();
+
+        Task Debug(IPage? pageToDebug = null);
     }
 
     public class LoanUpdateLoanDataApprovalObject : ILoanUpdateLoanDataApprovalObject
@@ -173,8 +175,23 @@ namespace NwbPlaywright.PageObjects
             return totalBusinessDays;
         }
 
+        // Pauses the test and opens the Playwright Inspector, so you can step through and inspect the page.
+        // Only works with a visible browser: set "Headless": false in appsettings.json. Press "Resume" in the Inspector to continue.
+        public async Task Debug(IPage? pageToDebug = null)
+        {
+            // Playwright runs headless when the setting is missing.
+            if (_testSettings.Headless ?? true)
+            {
+                Console.WriteLine("Debug() is skipped: the browser runs headless. Set \"Headless\": false in appsettings.json to pause here.");
+                return;
+            }
+
+            await (pageToDebug ?? page).PauseAsync();
+        }
+
         public async Task<string> GetSluitBriefBodyText(IPage page1)
         {
+            await Debug(page1);
             var locatorBodySluitbrief = page1.FrameLocator("iframe[name=\"ShowIFrame\"]").Locator("body");
             var tableText = await locatorBodySluitbrief.InnerTextAsync();
             return tableText;

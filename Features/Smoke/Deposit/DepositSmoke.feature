@@ -10,24 +10,6 @@ Feature: DepositSmoke
     Configuration deposit loan settings:
     TC01: Aanhef email 'beste allen',
 
-
-
-    @BekijkenVoorVerwijdering
-    Scenario: Smoke TC01 Deposit happy flow - PF
-        Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
-        Given I select counterparty "<CounterParty>" with "2" random counterparty individual(s)
-        Given I select PEGA task "Deposit"
-        Given I create a deposit case with start date "<StartDate>" and a maturity date "<MaturityDateInDays>" with foureyes approval set to "<SecondApprover>"
-        When I continue the emails should be send out and the case to approved by "<ApproverBoC>" to first BO stage LoanDataApproval
-        When I go through all the steps of the back office for a deposit case with "<Product>"
-        Then the backoffice case is succesfully created
-        Examples:
-            | TC | TestUser         | SecondApprover | ApproverBoC      | CounterParty                        | StartDate | MaturityDateInDays | Product |
-            | A  | AccountDesk1     | True           | AccountDesk1     | Trx Gemeente Meerdijk               | today     | 330                | KORTLE  |
-            | B  | AccountDesk1     | False          | AccountDesk2     | Trx Dunder Mifflin Paper Company    | today     | 330                | KORTLE  |
-            | E  | TreasuryManager1 | False          | TreasuryManager2 | Trx Gemeente Meerdijk               | today     | 160                | KORTLE  |
-            | F  | TreasuryManager1 | True           | Treasury1        | Trx Gemeente Meerdijk               | today     | 163                | KORTLE  |
-
     Scenario: Smoke TC01 Deposit happy flow - TRY
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         Given I select counterparty "<CounterParty>" with "2" random counterparty individual(s)
