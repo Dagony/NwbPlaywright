@@ -155,6 +155,10 @@ namespace NwbPlaywright.PageObjects
 
         Task WaitForSpinnerToDisappear();
 
+        /// <summary>
+        /// Reloading the page. This is sometimes needed to fetch the current state of the backend.
+        /// </summary>
+        /// <returns>A <see cref="Task"/> representing the result of the asynchronous operation.</returns>
         Task ReloadPage();
     }
 
@@ -665,9 +669,10 @@ namespace NwbPlaywright.PageObjects
             var caseFilterApplyLocator = pageIpage0.GetByRole(AriaRole.Button, new() { Name = "Apply" });
             var clickCaseFromSearch = pageIpage0.GetByRole(AriaRole.Cell, new() { Name = caseNumber, Exact = true }).First;
 
+            await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             await caseFilterLocator.WaitForAsync();
             await caseFilterLocator.ClickAsync();
-            await Task.Delay(1000);
+            await Assertions.Expect(caseFilterSearchFieldLocator).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions() { Timeout = 15000 });
             await caseFilterSearchFieldLocator.WaitForAsync();
             await caseFilterSearchFieldLocator.FillAsync(caseNumber);
             await this.PressEnter();

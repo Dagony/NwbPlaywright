@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+    <NUnit>
+        <NumberOfTestWorkers>6</NumberOfTestWorkers>
+    </NUnit>
+    <RunConfiguration>
+        <EnvironmentVariables>
+            <DEBUG>console</DEBUG>
+        </EnvironmentVariables>
+    </RunConfiguration>
+    <Playwright>
+        <LaunchOptions>
+            <Headless>false</Headless>
+            <Channel>chromium</Channel>
+        </LaunchOptions>
+    </Playwright>
+</RunSettings>

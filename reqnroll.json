@@ -5,7 +5,8 @@
   },
   "generator": {
     "allowDebugGeneratedFiles": true,
-    "allowRowTests": true
+    "allowRowTests": true,
+    "addNonParallelizableMarkerForTags": ["non-parallelizable"]
   },
   "trace": {
     "stepDefinitionSkeletonStyle": "AsyncCucumberExpressionAttribute",

@@ -314,8 +314,8 @@ namespace NwbPlaywright.StepDefinitions
             await Task.CompletedTask;
         }
 
-        [Then("the deposit email aanhef should be {string} and the English aanhef should be {string}")]
-        public async Task ThenTheDepositEmailAanhefShouldBeAndTheEnglishAanhefShouldBe(string expectedAanhefNL, string expectedAanhefENG)
+        [Then("the deposit email aanhef should be {string}")]
+        public async Task ThenTheDepositEmailAanhefShouldBeAndTheEnglishAanhefShouldBe(string expectedAanhefNL)
         {
             var lalCaseNumber = (string)_scenarioContext["savedlalCaseID"];
             var prefixName = (string)_scenarioContext["savedTC"];
@@ -332,7 +332,7 @@ namespace NwbPlaywright.StepDefinitions
                 }
                 else
                 {
-                    throw new Exception($"Emailadress of individual (origin: _sharedDataIndividual.Customers[{i}].EmailIndividual)");
+                    throw new Exception($"Email address of individual (origin: _sharedDataIndividual.Customers[{i}].EmailIndividual)");
                 }
             }
 

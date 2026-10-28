@@ -515,6 +515,7 @@ namespace NwbPlaywright.StepDefinitions
 
             await _finalSpreadObject.ClickSubmitFinalSpreadPage();
             await _winLostCorrectObject.ClickWinLostCorrect("Won");
+            await Task.Delay(2000);
             await _winLostCorrectObject.SelectWonAlternative();
 
             // Als het een WFZ Flow betreft zijn er extra velden op het WinLostCorrect scherm i.v.m. het WFZ Contract
