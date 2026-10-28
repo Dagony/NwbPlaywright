@@ -672,8 +672,7 @@ namespace NwbPlaywright.PageObjects
             await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             await caseFilterLocator.WaitForAsync();
             await caseFilterLocator.ClickAsync();
-            await Task.Delay(1000);
-            await Assertions.Expect(caseFilterSearchFieldLocator).ToBeVisibleAsync();
+            await Assertions.Expect(caseFilterSearchFieldLocator).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions() { Timeout = 15000 });
             await caseFilterSearchFieldLocator.WaitForAsync();
             await caseFilterSearchFieldLocator.FillAsync(caseNumber);
             await this.PressEnter();
