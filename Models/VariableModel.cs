@@ -112,7 +112,6 @@ namespace NwbPlaywright.Models
         {
             await _finalSpreadObject.SetReferenceRate(referenceRate);
             await _finalSpreadObject.SetStartDate(startDate);
-            await _basePageObject.PressTab();
             await Task.Delay(2000); // Hope to be able to remove quickly
             await _finalSpreadObject.SetMaturityDate(maturityDate);
 

@@ -165,6 +165,7 @@ namespace NwbPlaywright.PageObjects
 
             await loginButtonLocator.ClickAsync();
             await _basePageObject.WaitForResponse();
+            await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
         }
 
         private async Task FillCredentialsAsync(string username, string password)
