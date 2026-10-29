@@ -1,7 +1,7 @@
 ﻿@Long
 Feature: EmailContentFixed
 
-    Scenario: TC01A Fixed WSW WFZ Clients | Bullet
+    Scenario: TC01A Fixed WSW WFZ Clients - Bullet
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And  I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
         And I select PEGA task "Loan"
@@ -22,7 +22,7 @@ Feature: EmailContentFixed
 
     
 
-    Scenario: TC02A Fixed Normal Clients | Linear, Annuity etc
+    Scenario: TC02A Fixed Normal Clients - Linear, Annuity etc
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And  I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
         And I select PEGA task "Loan"
@@ -41,7 +41,7 @@ Feature: EmailContentFixed
             | TC | TestUser     | CounterParty          | Guarantor1 | Notional   | AmortType | AmortFreq | NumbOfAmort | StartDate  | MaturityDate | CouponFreq | FirstCouponDate | LastCouponDate | InterestRRDate | CouponDay | Swap  | SwapReferenceRate | ClearingHouse | BusinessDayConvention | DayCount | SpreadH1 | FinalSpread | DealRemark            | OfferReference      | MarketIRate | CustomerRate |
             | D  | AccountDesk1 | Trx Gemeente Meerdijk |            | 75.293.932 | Linear    | Annual    | 6           | 08-01-2027 | 08-01-2032   | Annual     |                 |                |                | 8         | False |                   |               |                       | Act/Act  | 0,5      | 5           | Deal Remark voor TC D | Offer ref voor TC D | 1           | 1,050        |
 
-    Scenario: TC03 Fixed Double Table |
+    Scenario: TC03 Fixed Double Table
         Given I login to the environment with test user "AccountDesk1" and start a "NORMAL" case
         And  I select counterparty "Trx Stichting Greendale Wonen" with "3" random counterparty individual(s)
         And I select PEGA task "Loan"

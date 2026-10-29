@@ -2,7 +2,7 @@
 Feature: LoanUpdateUGSheetRejection
 
 
-    Scenario: TC A FIXED REJECTION UG SHEET | WSW with Advisory
+    Scenario: TC A FIXED REJECTION UG SHEET - WSW with Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Stichting Greendale Wonen" with "1" random counterparty individual(s) and "1" random advisor individual(s)
         And I select PEGA task "Interest spread reset"
@@ -22,7 +22,7 @@ Feature: LoanUpdateUGSheetRejection
             | TC | TestUser     | SecID       | ExpectedOriginalSecID | ExpectedGuarantor1                         | Notional | ExpectedNotional | StartDate  | MaturityDate | ExpectedContractEndDate | FirstCouponDate | Swap  | CouponDay | CouponFreq | InterestRRDate | AmortType | AmortFreq | NumbOfAmort | DayCount | SpreadH1 | FinalSpread | MarketIRate | RejectionComment | DealRemark           |
             | A  | AccountDesk1 | 1 0027561RH | 1 0027561             | Stichting Waarborgfonds Sociale Woningbouw |          | 70000000,00      | 01-12-2031 | 06-07-2037   | 08-07-2037              |                 | False | Monday    | Weekly     | 04-12-2034     | Bullet    |           |             | ACT365   | 1        | 0,75        | 1,5         |                  | Dealremark voor TC A |
 
-    Scenario: TC D BASERATE REJECTION UG SHEET | Municipality and normal client without Advisory
+    Scenario: TC D BASERATE REJECTION UG SHEET - Municipality and normal client without Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
         And I select PEGA task "Interest spread reset"

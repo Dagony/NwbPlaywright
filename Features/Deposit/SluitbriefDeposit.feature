@@ -4,7 +4,7 @@ Feature: SluitbriefDeposit
     A short summary of the feature
 
 
-    Scenario: TC02 Sluitbrief for a deposit | With multiple advisor
+    Scenario: TC02 Sluitbrief for a deposit - With multiple advisor
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         Given I select counterparty "<CounterParty>" with "0" random counterparty individual(s) and "4" random advisor individual(s)
         Given I select PEGA task "Deposit"

@@ -1,7 +1,7 @@
 ﻿@LoanUpdate
 Feature: LoanUpdateEmailContentVariable
 
-    Scenario: TC01A Variable WSW WFZ Clients | 1wE
+    Scenario: TC01A Variable WSW WFZ Clients - 1wE
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
         And I select PEGA task "Interest spread reset"
