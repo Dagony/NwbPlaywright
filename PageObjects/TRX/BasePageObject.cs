@@ -20,7 +20,7 @@ using static NwbPlaywright.Fields.EnumsForTRX;
 namespace NwbPlaywright.PageObjects
 {
     public interface IBasePageObject
-        {
+    {
         Task PageWaitForUrlLoaded();
 
         Task WaitForPageLoadedState();
