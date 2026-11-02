@@ -9,9 +9,6 @@
 #   USER_SECRETS_JSON       required: the full contents of your local user secrets file
 #                           (~/.microsoft/usersecrets/7e5d5753-0396-4055-ab71-88df3e147f95/secrets.json),
 #                           i.e. the application URL and all test-user credentials.
-#   APPLICATION_URL_DEV     optional: URL per environment; when missing, the
-#   APPLICATION_URL_TEST    ApplicationUrl from USER_SECRETS_JSON is used.
-#   APPLICATION_URL_ACCEPT
 # Repository variable (optional):
 #   RUNNER                  runner label to run on, e.g. "self-hosted" when the Pega
 #                           environments can't be reached from GitHub's own runners.
