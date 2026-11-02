@@ -4,7 +4,7 @@ Feature: CopyUGsheetFixed
     For technical details about the columns see FO UGsheet fix loan document. There are 11 scenario's in this test set. After excution of A - F rerun the test cases but without
     data in FirstCouponDate (there should be different output values in column Q. See also test design of this feature.
 
-    Scenario: TC01 FIXED UG SHEET | Municipality with Advisory
+    Scenario: TC01 FIXED UG SHEET - Municipality with Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s) and "1" random advisor individual(s)
         And I select PEGA task "Loan"
@@ -27,7 +27,7 @@ Feature: CopyUGsheetFixed
 
 
 
-    Scenario: TC02 FIXED UG SHEET | Municipality without Advisory
+    Scenario: TC02 FIXED UG SHEET - Municipality without Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s)
         And I select PEGA task "Loan"

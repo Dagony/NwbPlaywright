@@ -4,7 +4,7 @@ Feature: EmailContentVariable
     A short summary of the feature
 
 
-    Scenario: TC01 Variable WSW WFZ Clients | 1wE - PF
+    Scenario: TC01 Variable WSW WFZ Clients - 1wE - PF
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         Given I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
         And I select PEGA task "Loan"

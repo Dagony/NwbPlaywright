@@ -3,7 +3,7 @@ Feature: LoanUpdateUGSheetFixed
 
     Compared to the normal UG sheet test automation, this one implements a ExpectedGuarantor1 property, because this field is already set in the loan update database record.
 
-    Scenario: TC01 FIXED UG SHEET | Municipality with Advisory
+    Scenario: TC01 FIXED UG SHEET - Municipality with Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s) and "1" random advisor individual(s)
         And I select PEGA task "Interest spread reset"
@@ -27,7 +27,7 @@ Feature: LoanUpdateUGSheetFixed
             | D  | AccountDesk1 | 1W0025262RH | 1 0025262             | Waarborgfonds voor de Zorgsector           |          | 2768342,00       | 17-10-2028 | 17-10-2069   |                 | 17        | Semi annual | 17-10-2035     | Linear    | Semi annual | 99          | Act/Act ISDA | 1        | 550         | 2,5         |                      |
 
 
-    Scenario: TC02 FIXED UG SHEET | Municipality without Advisory
+    Scenario: TC02 FIXED UG SHEET - Municipality without Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s)
         And I select PEGA task "Interest spread reset"

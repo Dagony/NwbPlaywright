@@ -1,7 +1,7 @@
 ﻿@LoanUpdate
 Feature: LoanUpdateSluitbrief
 
-    Scenario: TC01 Sluitbrief for a loan update fixed | No advisors
+    Scenario: TC01 Sluitbrief for a loan update fixed - No advisors
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "3" random counterparty individual(s)
         And I select PEGA task "Interest spread reset"
@@ -23,7 +23,7 @@ Feature: LoanUpdateSluitbrief
             | A  | AccountDesk1    | 1 0027588    | 1 0027588             | Stichting Waarborgfonds Sociale Woningbouw |          | 573.223,95       | Bullet    | Annual    |             | 19-06-2028 | 19-06-2087   | Annual     |                 |                |                | 19        | False | Act/365          | 0,5      | -50         |                                                |                | 0,3         | -0,20        |
             | B  | AccountDesk1 | 1W0014249RH2 | 1 0014249             |                                            |          | 623.423          | Linear    | Weekly    | 15          | 03-03-2027 | 10-04-2069   | Weekly     | 05-03-2027      | 04-12-2035     | 05-12-2035     | Wednesday | True  | Act/360          | 1,25     | 85          | This is a test deal remark for tc B Sluitbrief |                | 3           | 3,850        |
 
-    Scenario: TC02 BASERATE | Municipality without Advisory
+    Scenario: TC02 BASERATE - Municipality without Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s)
         And I select PEGA task "Interest spread reset"

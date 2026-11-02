@@ -1,7 +1,7 @@
 ﻿@LoanUpdate
 Feature: LoanUpdateEmailContentFixed
 
-    Scenario: TC01A Fixed WSW WFZ Clients | Bullet
+    Scenario: TC01A Fixed WSW WFZ Clients - Bullet
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "<CounterParty>" with "3" random counterparty individual(s) and "3" random advisor individual(s)
         And I select PEGA task "Interest spread reset"
@@ -23,7 +23,7 @@ Feature: LoanUpdateEmailContentFixed
 
   
 
-    Scenario: TC02A Fixed Normal Clients | Linear, Annuity etc
+    Scenario: TC02A Fixed Normal Clients - Linear, Annuity etc
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "<CounterParty>" with "3" random counterparty individual(s)
         And I select PEGA task "Interest spread reset"

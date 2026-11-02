@@ -6,8 +6,15 @@
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e63556cb-e0f6-426b-b97b-8e80434e2bd7" name="Changes" comment="" />
+    <list default="true" id="e63556cb-e0f6-426b-b97b-8e80434e2bd7" name="Changes" comment="hardening - Replace the BetByLabel &quot;Search Text&quot; Locator by the actual ID. Not pretty">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NwbPlaywright/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NwbPlaywright/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/Smoke/NormalLoans/NormalClientsSmoke.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Smoke/NormalLoans/NormalClientsSmoke.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObjects/TRX/BasePageObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/TRX/BasePageObject.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +27,7 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="INCOMING_COMMITS_CHECK_STRATEGY" value="FETCH" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="hardening" />
@@ -44,22 +52,73 @@
     <setting file="file://$PROJECT_DIR$/.vscode/settings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/515f17767dafa47a73d54a6af57def683364ff68b0bb5c441572ccc1303936e6/IFrameLocator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aee9fc43fab7123424d474aacc2abcdba0fd9df9a922842f5ed37dc29bb01af2/LocatorAssertionsToBeVisibleOptions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Shared/NWBContract.feature" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Shared/WSWContract.feature" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Smoke/Deposit/DepositSmoke.feature" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Features/Smoke/NormalLoans/WSWClientsSmoke.feature" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/Models/SharedModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b887ce1ca0d9d89ff98ada5ddf83a5724d318f3a9ea92be66315ad61f52e7f/ParallelizableAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/BasePageObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/FrontOffice/FinalSpreadObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/FrontOffice/WinLostCorrectObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/LoginPageObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/PageObjects/TRX/NewCaseObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/StepDefinitions/Shared/GeneralStepDefinitions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/StepDefinitions/Smoke/DepositSmokeStepDefinitions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/mark/Developer/NwbPlaywright/reqnroll.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000000074392" />
+      <entry key="S5" value="1.0000354392414184" />
+      <entry key="S10" value="1.0064063569427022" />
+      <entry key="S30" value="1.3413919348483339" />
+      <entry key="S60" value="2.1187871078391565" />
+      <entry key="M2" value="3.0943582420337843" />
+      <entry key="M5" value="4.080894455602428" />
+      <entry key="M10" value="4.509223552224041" />
+      <entry key="M15" value="4.6654404182541205" />
+      <entry key="M30" value="4.828916798996449" />
+      <entry key="H1" value="4.913485188745885" />
+      <entry key="H2" value="4.956496438368948" />
+      <entry key="H4" value="4.978186319793985" />
+      <entry key="D1" value="4.996355758731374" />
+      <entry key="W1" value="4.999479182406612" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="8.0973423835728075E-258" />
+      <entry key="MS500" value="3.816528419103822E-52" />
+      <entry key="S2" value="1.3977101699021894E-13" />
+      <entry key="S5" value="7.213845721419785E-6" />
+      <entry key="S10" value="0.0026858603317037517" />
+      <entry key="S30" value="0.13900416342279326" />
+      <entry key="S60" value="0.3728326211891782" />
+      <entry key="M2" value="0.61060021387908" />
+      <entry key="M5" value="0.8209236753158503" />
+      <entry key="M10" value="0.9060483846439165" />
+      <entry key="M15" value="0.9363414739369272" />
+      <entry key="M30" value="0.9676473913244056" />
+      <entry key="H1" value="0.9836906990128582" />
+      <entry key="H2" value="0.9918118264130843" />
+      <entry key="H4" value="0.9958974979449866" />
+      <entry key="D1" value="0.9993150779323824" />
+      <entry key="W1" value="0.9999021252566316" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="7.299068596850281E-4" />
+      <entry key="MS500" value="0.23585956272384004" />
+      <entry key="S2" value="0.6968886193486132" />
+      <entry key="S5" value="0.8655309032568976" />
+      <entry key="S10" value="0.9383280115411066" />
+      <entry key="S30" value="1.437128882473193" />
+      <entry key="S60" value="2.4507172975802725" />
+      <entry key="M2" value="3.6734697633146216" />
+      <entry key="M5" value="4.884982784973264" />
+      <entry key="M10" value="5.405956801641527" />
+      <entry key="M15" value="5.595355446878547" />
+      <entry key="M30" value="5.793238248872451" />
+      <entry key="H1" value="5.8954838548308075" />
+      <entry key="H2" value="5.94745486965448" />
+      <entry key="H4" value="5.973655261191556" />
+      <entry key="D1" value="5.995599151156714" />
+      <entry key="W1" value="5.999371060507469" />
+    </decayedShown>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -72,25 +131,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.report_2026-10-26_20-11-30.html.executor": "Run",
-    "JavaScript Debug.report_2026-10-27_07-44-08.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "c9a9d7b6-6977-4c08-b42e-98c9e2392184.executor": "Debug",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
-    "rider.unittesting.toolwindow.stripe.button.shown": "true",
-    "settings.editor.selected.configurable": "RiderUnitTestingPageId"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.report_2026-10-26_20-11-30.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.report_2026-10-27_07-44-08.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;c9a9d7b6-6977-4c08-b42e-98c9e2392184.executor&quot;: &quot;Debug&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hardening&quot;,
+    &quot;git.auto.fetch.suggestion.counter&quot;: &quot;1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
+    &quot;rider.unittesting.toolwindow.stripe.button.shown&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderUnitTestingPageId&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JavaScript Debug.report_2026-10-26_20-11-30.html">
     <configuration name="report_2026-10-26_20-11-30.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/NwbPlaywright/bin/Debug/net10.0/output/report_2026-10-26_20-11-30.html" useBuiltInWebServerPort="true">
       <method v="2" />

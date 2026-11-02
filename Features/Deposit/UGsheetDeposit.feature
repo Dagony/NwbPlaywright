@@ -4,7 +4,7 @@ Feature: UGsheetDeposit
     A short summary of the feature
 
 
-    Scenario: TC01 DEPOSIT UG SHEET | Normal Counterparty with guarantors - TRY
+    Scenario: TC01 DEPOSIT UG SHEET - Normal Counterparty with guarantors - TRY
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         Given I select counterparty "<CounterParty>" with "1" random counterparty individual(s) and "1" random advisor individual(s)
         Given I select PEGA task "Deposit"
@@ -23,7 +23,7 @@ Feature: UGsheetDeposit
             | B  | TreasuryManager1 | Trx Dunder Mifflin Paper Company | 100005,00 | 29-12-2026 | 15-10-2027   | 0,5     | -0,7513    | 5,50   |            |                | 27-12-2023 |
 
 
-    Scenario: TC02 DEPOSIT UG SHEET | GR0% Scenario - PF
+    Scenario: TC02 DEPOSIT UG SHEET - GR0% Scenario - PF
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         Given I select counterparty "<CounterParty>" with "1" random counterparty individual(s)
         Given I select PEGA task "Deposit"

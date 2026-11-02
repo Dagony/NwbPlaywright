@@ -666,14 +666,14 @@ namespace NwbPlaywright.PageObjects
             }
 
             var caseFilterSearchFieldLocator = pageIpage0.GetByLabel("Search Text");
-            var caseFilterApplyLocator = pageIpage0.GetByRole(AriaRole.Button, new() { Name = "Apply" });
-            var clickCaseFromSearch = pageIpage0.GetByRole(AriaRole.Cell, new() { Name = caseNumber, Exact = true }).First;
+            var clickCaseFromSearch = pageIpage0.GetByRole(AriaRole.Cell, new FrameLocatorGetByRoleOptions { Name = caseNumber, Exact = true }).First;
 
             await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             await caseFilterLocator.WaitForAsync();
             await caseFilterLocator.ClickAsync();
-            await Assertions.Expect(caseFilterSearchFieldLocator).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions() { Timeout = 15000 });
             await caseFilterSearchFieldLocator.WaitForAsync();
+            await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+            await Assertions.Expect(caseFilterSearchFieldLocator).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions() { Timeout = 15000 });
             await caseFilterSearchFieldLocator.FillAsync(caseNumber);
             await this.PressEnter();
             await clickCaseFromSearch.ClickAsync();
@@ -754,43 +754,43 @@ namespace NwbPlaywright.PageObjects
 
         public string GetRandomNotional(int mimimum, int maximum)
         {
-            Random random = new Random();
-            string notional = random.Next(mimimum, maximum).ToString();
-            string formattedNotional = string.Format(CultureInfo.GetCultureInfo("nl-NL"), "{0:#,0}", long.Parse(notional));
+            var random = new Random();
+            var notional = random.Next(mimimum, maximum).ToString();
+            var formattedNotional = string.Format(CultureInfo.GetCultureInfo("nl-NL"), "{0:#,0}", long.Parse(notional));
             return formattedNotional;
         }
 
         public async Task OpenCaseOnScreen(string caseNumber)
         {
-            var caseNumberRowLocatorNEWNEWNEW = pageIpage0.GetByRole(AriaRole.Cell, new() { Name = caseNumber, Exact = true }).First;
-            await caseNumberRowLocatorNEWNEWNEW.WaitForAsync();
-            await caseNumberRowLocatorNEWNEWNEW.ClickAsync();
+            var caseNumberRowLocator = pageIpage0.GetByRole(AriaRole.Cell, new() { Name = caseNumber, Exact = true }).First;
+            await caseNumberRowLocator.WaitForAsync();
+            await caseNumberRowLocator.ClickAsync();
         }
 
         public Task CloseTabInPega() => page.Locator("//span[@id='close']").ClickAsync();
 
         public Task CloseAttachmentFile() => pageIpage1.Locator("//i[@class='pi pi-times']").ClickAsync();
 
-        public Task ClickOpenCreateOfferLink() => pageIpage1.GetByRole(AriaRole.Link, new() { Name = "Create offer (Offer)" }).ClickAsync();
+        public Task ClickOpenCreateOfferLink() => pageIpage1.GetByRole(AriaRole.Link, new FrameLocatorGetByRoleOptions { Name = "Create offer (Offer)" }).ClickAsync();
 
-        public Task ClickOpenValidateRequestLink() => pageIpage1.GetByRole(AriaRole.Link, new() { Name = "Validate request (Validate request)" }).ClickAsync();
+        public Task ClickOpenValidateRequestLink() => pageIpage1.GetByRole(AriaRole.Link, new FrameLocatorGetByRoleOptions { Name = "Validate request (Validate request)" }).ClickAsync();
 
-        public Task ClickSelectContactInitializationLink() => pageIpage1.GetByRole(AriaRole.Link, new() { Name = "Select contact (Create)" }).ClickAsync();
+        public Task ClickSelectContactInitializationLink() => pageIpage1.GetByRole(AriaRole.Link, new FrameLocatorGetByRoleOptions { Name = "Select contact (Create)" }).ClickAsync();
 
-        public Task ClickLoanUpdateOpenValidateRequestLink() => pageIpage1.GetByRole(AriaRole.Link, new() { Name = "Validate request (Validate)" }).ClickAsync();
+        public Task ClickLoanUpdateOpenValidateRequestLink() => pageIpage1.GetByRole(AriaRole.Link, new FrameLocatorGetByRoleOptions { Name = "Validate request (Validate)" }).ClickAsync();
 
-        public Task ClickOpenCheckSurepayLink() => pageIpage1.GetByRole(AriaRole.Link, new() { Name = "Check Surepay (Validate request)" }).ClickAsync();
+        public Task ClickOpenCheckSurepayLink() => pageIpage1.GetByRole(AriaRole.Link, new FrameLocatorGetByRoleOptions { Name = "Check Surepay (Validate request)" }).ClickAsync();
 
-        public Task ClickOpenSendConfirmation() => pageIpage1.GetByRole(AriaRole.Link, new() { Name = "SendConfirmation (Validate request)" }).ClickAsync();
+        public Task ClickOpenSendConfirmation() => pageIpage1.GetByRole(AriaRole.Link, new FrameLocatorGetByRoleOptions { Name = "SendConfirmation (Validate request)" }).ClickAsync();
 
-        public Task ClickOpenSendConfirmationDeposit() => pageIpage1.GetByRole(AriaRole.Link, new() { Name = "Send confirmation (Administration)" }).ClickAsync();
+        public Task ClickOpenSendConfirmationDeposit() => pageIpage1.GetByRole(AriaRole.Link, new FrameLocatorGetByRoleOptions { Name = "Send confirmation (Administration)" }).ClickAsync();
 
         public async Task<string> GetCaseStatus()
         {
-            var caseStatusALLLocator = pageIpage1.Locator("(//span[normalize-space()='Resolved-Completed'])[1]");
+            var caseStatusAllLocator = pageIpage1.Locator("(//span[normalize-space()='Resolved-Completed'])[1]");
 
-            await caseStatusALLLocator.WaitForAsync();
-            var textCaseStatus = await caseStatusALLLocator.InnerTextAsync();
+            await caseStatusAllLocator.WaitForAsync();
+            var textCaseStatus = await caseStatusAllLocator.InnerTextAsync();
             return textCaseStatus;
         }
 

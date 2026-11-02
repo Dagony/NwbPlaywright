@@ -19,6 +19,7 @@ Feature: NormalClientsSmoke
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "3" random counterparty individual(s)
 
+        @Mark
     Scenario: Smoke TC01 Normal Client happy flow
         Given I create a "<ProductType>" LAL case on the front office with start date "<StartDate>" and a maturity of "<MaturityInYears>" Years
         When I continue the emails should be send out and the case to BO first flow LoanDataApproval

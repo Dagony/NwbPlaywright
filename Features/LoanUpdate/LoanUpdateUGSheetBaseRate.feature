@@ -5,7 +5,7 @@ Feature: LoanUpdateUGSheetBaseRate
     compared to the normal UG sheet test automation, this one implements a ExpectedGuarantor1 property, because this field is already set in the loan update database record.
 
 
-    Scenario: TC01 BASERATE UG SHEET | Municipality with Advisory
+    Scenario: TC01 BASERATE UG SHEET - Municipality with Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s) and "1" random advisor individual(s)
         And I select PEGA task "Interest spread reset"
@@ -28,7 +28,7 @@ Feature: LoanUpdateUGSheetBaseRate
             | C  | AccountDesk1 | 1 0027662 | 1 0027662             | Stichting Waarborgfonds Sociale Woningbouw |          | 125125,00        | 17-10-2028 | 17-05-2069   | 12mE          |                 | 17        | Annual             | 17-10-2035     | Bullet            |                   |             | Act/360          | 1        | 1             | 10,00       | 1                | 4.74200000 |
             | D  | AccountDesk1 | 1 0027664 | 1 0027664             | Waarborgfonds voor de Zorgsector           |          | 2768342,00       | 17-10-2028 | 17-10-2069   | 6mE           |                 | 17        | Semi annual        | 17-10-2035     | Linear            | Semi annual       | 99          | Act/Act ISDA     | 1        | 1             | 550,00      | 1                | 1.10000000 |
 
-    Scenario: TC02 BASERATE UG SHEET | Municipality without Advisory
+    Scenario: TC02 BASERATE UG SHEET - Municipality without Advisory
         Given I login to the environment with test user "<TestUser>" and start a "NORMAL" case
         And I select counterparty "Trx Gemeente Meerdijk" with "1" random counterparty individual(s)
         And I select PEGA task "Interest spread reset"
