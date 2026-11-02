@@ -20,7 +20,7 @@ using static NwbPlaywright.Fields.EnumsForTRX;
 namespace NwbPlaywright.PageObjects
 {
     public interface IBasePageObject
-    {
+        {
         Task PageWaitForUrlLoaded();
 
         Task WaitForPageLoadedState();
@@ -666,14 +666,14 @@ namespace NwbPlaywright.PageObjects
             }
 
             var caseFilterSearchFieldLocator = pageIpage0.GetByLabel("Search Text");
-            var caseFilterApplyLocator = pageIpage0.GetByRole(AriaRole.Button, new() { Name = "Apply" });
-            var clickCaseFromSearch = pageIpage0.GetByRole(AriaRole.Cell, new() { Name = caseNumber, Exact = true }).First;
+            var clickCaseFromSearch = pageIpage0.GetByRole(AriaRole.Cell, new FrameLocatorGetByRoleOptions { Name = caseNumber, Exact = true }).First;
 
             await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             await caseFilterLocator.WaitForAsync();
             await caseFilterLocator.ClickAsync();
-            await Assertions.Expect(caseFilterSearchFieldLocator).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions() { Timeout = 15000 });
             await caseFilterSearchFieldLocator.WaitForAsync();
+            await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+            await Assertions.Expect(caseFilterSearchFieldLocator).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions() { Timeout = 15000 });
             await caseFilterSearchFieldLocator.FillAsync(caseNumber);
             await this.PressEnter();
             await clickCaseFromSearch.ClickAsync();
