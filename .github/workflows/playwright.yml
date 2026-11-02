@@ -21,7 +21,7 @@ on:
       tests:
         description: Group of tests (Gherkin tag) to run
         type: choice
-        options: [Smoke, Short, Long, Variable, Deposit, LoanUpdate, CsvFiles, Shared, Swaps, PricingGrid, CLM, All]
+        options: [Smoke, CRM, Short, Long, Variable, Deposit, LoanUpdate, CsvFiles, Shared, Swaps, PricingGrid, CLM, All]
         default: Smoke
 
 # The tests create and lock cases in a shared environment, so never run two jobs
