@@ -13,6 +13,8 @@ namespace NwbPlaywright.Config
 
         public string? ApplicationUrl { get; set; }
 
+        public string? CrmApplicationUrl { get; set; }
+
         public string? ApplicationEnvironment { get; set; }
 
         public bool? Headless { get; set; }
@@ -180,6 +182,10 @@ namespace NwbPlaywright.Config
         public string? AcceptTestSpecializedFinanceTRX1 { get; set; }
 
         public string? TestSpecializedFinanceTRX1Password { get; set; }
+
+        public string? DevMarkdeWit { get; set; }
+
+        public string? DevMarkdeWitPassword { get; set; }
     }
 
     public enum DriverType

@@ -94,27 +94,32 @@ namespace NwbPlaywright.Hooks
         {
             _retryCount = 0;
 
-            if (_testSettings.ApplicationUrl is not null)
+            // Scenarios tagged @CRM start in the CRM application instead of TRX
+            var isCrmScenario = _scenarioContext.ScenarioInfo.CombinedTags.Contains("CRM");
+            var applicationUrl = isCrmScenario ? _testSettings.CrmApplicationUrl : _testSettings.ApplicationUrl;
+
+            if (applicationUrl is not null)
             {
-                await (await _page).GotoAsync(_testSettings.ApplicationUrl);
+                await (await _page).GotoAsync(applicationUrl);
                 await (await _page).SetViewportSizeAsync(_testSettings.ViewSizePortLength, _testSettings.ViewSizePortWidth);
 
-                if (_testSettings.ApplicationUrl.Contains("dt1"))
+                if (applicationUrl.Contains("dt1"))
                 {
                     _testSettings.ApplicationEnvironment = "DEV";
                 }
-                else if (_testSettings.ApplicationUrl.Contains("dt2"))
+                else if (applicationUrl.Contains("dt2"))
                 {
                     _testSettings.ApplicationEnvironment = "TEST";
                 }
-                else if (_testSettings.ApplicationUrl.Contains("stg1"))
+                else if (applicationUrl.Contains("stg1"))
                 {
                     _testSettings.ApplicationEnvironment = "ACCEPT";
                 }
             }
             else
             {
-                throw new Exception("_testSettings.ApplicationUrl is not initialized. Call from Hooks1.cs, public async Task BeforeScenario()");
+                var settingName = isCrmScenario ? nameof(TestSettings.CrmApplicationUrl) : nameof(TestSettings.ApplicationUrl);
+                throw new Exception($"_testSettings.{settingName} is not initialized. Call from Hooks1.cs, public async Task BeforeScenario()");
             }
         }
     }

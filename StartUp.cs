@@ -1,11 +1,9 @@
-using Castle.Windsor;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Reqnroll.Windsor;
-
 using System.ComponentModel;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using Castle.Windsor;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using NwbPlaywright.Config;
 using NwbPlaywright.DataTransforms;
 using NwbPlaywright.Drivers;
@@ -14,10 +12,13 @@ using NwbPlaywright.Models;
 using NwbPlaywright.PageObjects;
 using NwbPlaywright.PageObjects.CLM;
 using NwbPlaywright.PageObjects.CLM.Individual;
+using NwbPlaywright.PageObjects.CRM;
+using NwbPlaywright.PageObjects.CRM.Components;
 using NwbPlaywright.PageObjects.TRX;
 using NwbPlaywright.PageObjects.TRX.FrontOffice;
 using NwbPlaywright.PageObjects.TRX.Treasury;
 using NwbPlaywright.Support;
+using Reqnroll.Windsor;
 
 namespace NwbPlaywright
 {
@@ -85,6 +86,9 @@ namespace NwbPlaywright
             container.Register(Castle.MicroKernel.Registration.Component.For<IRejectionObject>().ImplementedBy<RejectionObject>());
             container.Register(Castle.MicroKernel.Registration.Component.For<IBasePageCLMObject>().ImplementedBy<BasePageCLMObject>());
             container.Register(Castle.MicroKernel.Registration.Component.For<INewIndividualEntityObject>().ImplementedBy<NewIndividualEntityObject>());
+            container.Register(Castle.MicroKernel.Registration.Component.For<ICrmBasePageObject>().ImplementedBy<CrmBasePageObject>());
+            container.Register(Castle.MicroKernel.Registration.Component.For<ICrmLoginPageObject>().ImplementedBy<CrmLoginPageObject>());
+            container.Register(Castle.MicroKernel.Registration.Component.For<ICrmMenuComponent>().ImplementedBy<MenuComponent>());
 
             return container;
         }
