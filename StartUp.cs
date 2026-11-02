@@ -87,6 +87,7 @@ namespace NwbPlaywright
             container.Register(Castle.MicroKernel.Registration.Component.For<IBasePageCLMObject>().ImplementedBy<BasePageCLMObject>());
             container.Register(Castle.MicroKernel.Registration.Component.For<INewIndividualEntityObject>().ImplementedBy<NewIndividualEntityObject>());
             container.Register(Castle.MicroKernel.Registration.Component.For<ICrmBasePageObject>().ImplementedBy<CrmBasePageObject>());
+            container.Register(Castle.MicroKernel.Registration.Component.For<ICrmOrganizationsPageObject>().ImplementedBy<CrmOrganizationsPageObject>());
             container.Register(Castle.MicroKernel.Registration.Component.For<ICrmLoginPageObject>().ImplementedBy<CrmLoginPageObject>());
             container.Register(Castle.MicroKernel.Registration.Component.For<ICrmMenuComponent>().ImplementedBy<MenuComponent>());
 

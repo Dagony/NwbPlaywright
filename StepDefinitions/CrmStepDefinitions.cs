@@ -14,6 +14,7 @@ namespace NwbPlaywright.StepDefinitions
         ILoginPageObject loginPageObject,
         ICrmBasePageObject crmBasePageObject,
         ICrmLoginPageObject crmLoginPageObject,
+        ICrmOrganizationsPageObject crmOrganizationsPageObject,
         INewCaseObject newCaseObject,
         TestSettings testSettings)
     {
@@ -24,6 +25,8 @@ namespace NwbPlaywright.StepDefinitions
         private readonly ICrmLoginPageObject _crmLoginPageObject = crmLoginPageObject;
 
         private readonly ICrmBasePageObject _crmBasePageObject = crmBasePageObject;
+
+        private readonly ICrmOrganizationsPageObject _crmOrganizationsPageObject = crmOrganizationsPageObject;
 
         private readonly IBasePageObject _basePageObject = basePageObject;
 
@@ -36,8 +39,6 @@ namespace NwbPlaywright.StepDefinitions
         [Given("I login to the CRM environment with test user {string}")]
         public async Task GivenILoginToTheCrmEnvironment(string testUser)
         {
-            Console.Write("Mark wil dit zien:");
-            Console.Write(_testSettings.CrmApplicationUrl);
             await _crmLoginPageObject.WaitForUrlLoaded();
             await _basePageObject.GrantGeoLocationPermission();
             await _crmLoginPageObject.LoginToCrm();
@@ -48,6 +49,20 @@ namespace NwbPlaywright.StepDefinitions
             privacyDialogShowing.Should().Be(true);
             await _crmLoginPageObject.ClickPrivacyDialogAcceptButton();
             await _crmBasePageObject.WaitForPageToBeLoaded();
+        }
+
+        [Given("I search for an Organization")]
+        public async Task GivenICreateANewOrganization()
+        {
+            await _crmBasePageObject.NavigateToMenuItem("ORGANIZATIONS");
+            await _crmOrganizationsPageObject.IsOrganizationsPageShowing();
+            await _crmOrganizationsPageObject.SearchForOrganization("Markie", "0 results");
+        }
+
+        [When("I create a new Organization")]
+        public async Task WhenICreateANewOrganization()
+        {
+            
         }
     }
 }

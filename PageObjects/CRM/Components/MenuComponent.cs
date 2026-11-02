@@ -28,7 +28,7 @@ namespace NwbPlaywright.PageObjects.CRM.Components
                 throw new ArgumentException($"Menu item '{menuItem}' does not exist.");
             }
 
-            var menuItemLocator = menuComponent.Locator($"li[name=menuItems[{menuItem.ToUpper()}]");
+            var menuItemLocator = menuComponent.Locator($"li[name={menuItems[menuItem.ToUpper()]}]");
             await menuItemLocator.WaitForAsync(new LocatorWaitForOptions
                 { Timeout = 10000, State = WaitForSelectorState.Visible });
             await menuItemLocator.ClickAsync(new LocatorClickOptions { Delay = 200 });
